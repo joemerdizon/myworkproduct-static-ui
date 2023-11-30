@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Work Product</title>
+  
+  <link rel="shortcut icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="vendors/feather/feather.css">  
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">   
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">  
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="css/calendar-main.css">    
+  <link rel="stylesheet" href="css/loader.css">     
+  <link rel="stylesheet" href="css/custom.css">  
+  <link rel="stylesheet" href="css/standard.css">   
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">        
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-mail mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="images/faces/face1.jpg" alt="">                  
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">
+                    John Smith 
+                    <small class="text-muted font-italic float-right">3 mins ago</small>
+                  </h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="images/faces/face2.jpg" alt="">                  
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">
+                    Fleece Marigold 
+                    <small class="text-muted font-italic float-right">5 mins ago</small>
+                  </h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="images/faces/face3.jpg" alt="">                  
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">
+                    Gordon Norman 
+                    <small class="text-muted font-italic float-right">15 mins ago</small>
+                  </h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <span class="text-center font-weight-bold w-100">See all Messages</span>
+              </a>
+            </div>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>         
+          <li class="nav-item nav-settings d-none d-lg-flex mx-2">
+            <a class="nav-link" href="#">
+              <i class="ti-settings"></i>
+            </a>
+          </li>                     
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face0.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="profile-information.html" class="dropdown-item">
+                <i class="ti-user text-primary"></i>
+                Profile
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger" class="settings-trigger-top">
+          <i class="fa-solid fa-plus"></i>          
+        </div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">CUSTOMIZE DASHBOARD</p>
+          <div class="col-12 mt-4">  
+            <small>Show / Hide Widgets</small>          
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" checked>
+                Calendar
+              <i class="input-helper"></i></label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" checked>
+                Chart
+              <i class="input-helper"></i></label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" checked>
+                Quick Links
+              <i class="input-helper"></i></label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                Report
+              <i class="input-helper"></i></label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                Others
+              <i class="input-helper"></i></label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" checked>
+                Post Assignment
+              <i class="input-helper"></i></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <p class="settings-heading">SIDEBAR COLOR</p>
+        <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+        <p class="settings-heading mt-2">HEADER COLOR</p>
+        <div class="color-tiles mx-0 px-4">
+          <div class="tiles default"></div>
+          <div class="tiles dark"></div>                        
+          <div class="tiles"></div>     
+          <div class="tiles"></div>     
+          <div class="tiles success"></div>
+          <div class="tiles danger"></div>
+          <div class="tiles warning"></div>            
+          <div class="tiles info"></div>            
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">              
+              <i class="fa-solid fa-gauge menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
+              <i class="fa-solid fa-tasks menu-icon"></i>
+              <span class="menu-title">Task</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-task">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="create-workflow.html">Create Workflow</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-workflow.html">Assign Workflow</a></li>
+              </ul>
+            </div>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-reports" aria-expanded="false" aria-controls="nav-item-reports">
+              <i class="fa-solid fa-file-lines menu-icon"></i>
+              <span class="menu-title">Work Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-reports">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="view-work-product-template.html">View Work Product Template</a></li>
+                <li class="nav-item"> <a class="nav-link" href="generate-work-product.html">Generate Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-work-product.html">Assign Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">My Generated Work Product</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creators-hub.html">
+              <i class="fa-solid fa-desktop menu-icon"></i>
+              <span class="menu-title">Creators Hub</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">
+              <i class="fa-solid fa-ticket menu-icon"></i>
+              <span class="menu-title">Tickets</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-tickets">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="generate-ticket-report.html">Generate Ticket Report</a></li>
+                <li class="nav-item"> <a class="nav-link" href="submit-a-ticket.html">Submit a Ticket</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-approval" aria-expanded="false" aria-controls="nav-item-approval">
+              <i class="fa-solid fa-thumbs-up menu-icon"></i>
+              <span class="menu-title">Approval</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-approval">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#">Request</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Submit</a></li>
+              </ul>
+            </div>
+          </li>                   
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">              
+              <i class="fa-solid fa-laptop-file menu-icon"></i>
+              <span class="menu-title">Files</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="comments-and-notes.html">              
+              <i class="fa-solid fa-comments menu-icon"></i>
+              <span class="menu-title">Comments and Notes</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="market-place.html">              
+              <i class="fa-solid fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">Market Place</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">              
+              <i class="fa-solid fa-phone-square menu-icon"></i>
+              <span class="menu-title">Contacts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-settings" aria-expanded="false" aria-controls="nav-item-settings">
+              <i class="fa-solid fa-cogs menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-settings">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="import-task-categories-and-sub-categories.html">Import Data</a></li>
+              </ul>
+            </div>
+          </li>  
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">              
+              <i class="fa-solid fa-book menu-icon"></i>
+              <span class="menu-title">Content Library</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="#">              
+              <i class="fa-solid fa-database menu-icon"></i>
+              <span class="menu-title">Backup</span>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">              
+              <i class="fa-solid fa-user menu-icon"></i>
+              <span class="menu-title">Client Admin Tab</span>
+            </a>
+          </li>  -->
+        </ul>
+      </nav>
+      <!-- partial -->
+
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-12 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Welcome Renmark</h3>
+                  <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
+                </div>                                
+              </div>              
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12 mt-4 mb-4">
+              <h4 class="card-title"><i class="fa-solid fa-arrow-up-right-from-square"></i> Quick Links</h4>
+              <div class="my-3">
+                <hr>
+              </div>
+              <div class="row mb-4">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-6 stretch-card mb-4">
+                  <div class="card bg-white shadow">
+                    <div class="card-body p-3">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-12">
+                            <div style="height: 60px;">
+                              <h3 class="m-0">100 <i class="fa-solid fa-tasks float-right"></i></h3>
+                              <small class="text-uppercase smallest">Task</small>
+                            </div>
+                            <a href="javascript:void();" class="small text-decoration-none">
+                              more details
+                              <i class="fa-solid fa-circle-chevron-right btn-icon-append ml-3"></i>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-6 stretch-card mb-4">
+                  <div class="card bg-white shadow">
+                    <div class="card-body p-3">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-12">
+                            <div style="height: 60px;">
+                              <h3 class="m-0">120<i class="fa-solid fa-file-lines float-right"></i></h3>
+                              <small class="text-uppercase smallest">Work Product</small>
+                            </div>
+                            <a href="javascript:void();" class="small text-decoration-none">
+                              more details
+                              <i class="fa-solid fa-circle-chevron-right btn-icon-append ml-3"></i>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-6 stretch-card mb-4">
+                  <div class="card bg-white shadow">
+                    <div class="card-body p-3">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-12">
+                            <div style="height: 60px;">
+                              <h3 class="m-0">20 <i class="fa-solid fa-ticket float-right"></i></h3>
+                              <small class="text-uppercase smallest">Tickets</small>
+                            </div>
+                            <a href="javascript:void();" class="small text-decoration-none">
+                              more details
+                              <i class="fa-solid fa-circle-chevron-right btn-icon-append ml-3"></i>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-lg-2 col-md-2 col-sm-4 col-6 stretch-card mb-4">
+                  <div class="card bg-white shadow">
+                    <div class="card-body p-3">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-12">
+                          <div style="height: 60px;">
+                            <h3 class="m-0">64 <i class="fa-solid fa-thumbs-up float-right"></i></h3>
+                            <small class="text-uppercase smallest">Approval</small>
+                          </div>
+                          <a href="javascript:void();" class="small text-decoration-none">
+                            more details
+                            <i class="fa-solid fa-circle-chevron-right btn-icon-append ml-3"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-6 stretch-card mb-4">
+                  <div class="card bg-white shadow">
+                    <div class="card-body p-3">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-12">
+                          <div style="height: 60px;">
+                            <h3 class="m-0">5 <i class="fa-solid fa-comments float-right"></i></h3>
+                            <small class="text-uppercase smallest">Comments</small>
+                          </div>
+                          <a href="javascript:void();" class="small text-decoration-none">
+                            more details
+                            <i class="fa-solid fa-circle-chevron-right btn-icon-append ml-3"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-6 stretch-card mb-4">
+                  <div class="card bg-white shadow">
+                    <div class="card-body p-3">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-12">
+                          <div style="height: 60px;">
+                            <h3 class="m-0">123 <i class="fa-solid fa-shopping-bag float-right"></i></h3>
+                            <small class="text-uppercase smallest">Market Place</small>
+                          </div>
+                          <a href="javascript:void();" class="small text-decoration-none">
+                            more details
+                            <i class="fa-solid fa-circle-chevron-right btn-icon-append ml-3"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row mb-5">
+            <div class="col-lg-12 grid-margin grid-margin-lg-0">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-12 mb-5 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"><i class="fa-solid fa-tasks"></i> Tasks</h4>
+                      <div class="my-3">
+                        <hr>
+                      </div>
+                      <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
+                      <canvas id="dashboardChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12 mb-5 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"><i class="fa-solid fa-clipboard-check"></i> Post Assignment</h4>
+
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-12">
+                          <div class="form-group mb-0 row">
+                            <label for="name_of_report" class="col-sm-4 col-form-label text-right">Filter By:</label>
+                            <div class="col-sm-8">
+                              <select id="" class="form-control" required>
+                                <option disabled selected></option>
+                                <option value="Filter Criteria 1">Filter Criteria 1</option>
+                                <option value="Filter Criteria 2">Filter Criteria 2</option>
+                                <option value="Filter Criteria 3">Filter Criteria 3</option>
+                                <option value="Filter Criteria 4">Filter Criteria 4</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="col-md-6 col-sm-6 col-12">
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-primary" type="button">
+                                <i class="icon-search"></i>                                    
+                                Search
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="my-3">
+                        <hr>
+                      </div>
+                      <div class="overflow-auto">
+                        <div class="accordion collapase-card" id="accordionPostAssignment1">
+                          <div class="card bg-light border mb-2">
+                            <div class="card-header" id="postAssignment1">
+                              <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#accordionSectionPostAssignment1" aria-expanded="true" aria-controls="accordionSectionPostAssignment1">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="25px" height="25px"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M184.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L39 113c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L39 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM256 96c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H288c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H288c-17.7 0-32-14.3-32-32zM192 416c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32zM80 464c-26.5 0-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48z"/></svg>
+                                <span class="h5 font-weight-bold mx-2">Limit First Day Paper Work</span>
+                                <span class="badge badge-danger ml-2">
+                                  <b>Time Status:</b> Overdue
+                                </span>
+                              </a>
+                            </div>
+                            <div id="accordionSectionPostAssignment1" class="collapse" aria-labelledby="postAssignment1" data-parent="#accordionPostAssignment1">
+                              <div class="card-body pt-4">
+                                <div class="row">
+                                  <div class="col-12 mb-3">
+                                    <div class="float-right mt-0" style="margin-left: 100px;">
+                                      <button type="button" class="btn btn-primary btn-rounded btn-icon" data-toggle="tooltip" data-placement="right" title="Open">
+                                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                      </button>                                                                            
+                                    </div> 
+                                    
+                                    <span class="text-secondary"><i class="far fa-calendar-check"></i> <b>Due Date:</b> November 16 2022 - 04:40 PM</span>
+                                    <p class="m-0">
+                                      90 days Onboarding Checklist
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <div class="progress" style="height: 20px;">
+                                      <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div> 
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <span class="badge badge-dark float-right ml-2">
+                                      <b>Completition:</b> Pending
+                                    </span>
+                                    <span class="badge badge-warning float-right ml-2">
+                                      <b>Priority:</b> Normal
+                                    </span>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="accordion collapase-card" id="accordionPostAssignment2">
+                          <div class="card bg-light border mb-2">
+                            <div class="card-header" id="postAssignment2">
+                              <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#accordionSectionPostAssignment2" aria-expanded="true" aria-controls="accordionSectionPostAssignment2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25px" height="25px"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M249.4 25.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L269.3 96 416 96c53 0 96 43 96 96v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V192c0-17.7-14.3-32-32-32l-146.7 0 25.4 25.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-80-80c-12.5-12.5-12.5-32.8 0-45.3l80-80zm13.3 256l80 80c12.5 12.5 12.5 32.8 0 45.3l-80 80c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 416 96 416c-17.7 0-32 14.3-32 32v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V448c0-53 43-96 96-96l146.7 0-25.4-25.4c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0zM512 384c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM64 64c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64S28.7 64 64 64z"/></svg>
+                                <span class="h5 font-weight-bold mx-2">Limit First Day Paper Work</span>
+                                <span class="badge badge-danger ml-2">
+                                  <b>Time Status:</b> Overdue
+                                </span>
+                              </a>
+                            </div>
+                            <div id="accordionSectionPostAssignment2" class="collapse" aria-labelledby="postAssignment2" data-parent="#accordionPostAssignment2">
+                              <div class="card-body pt-4">
+                                <div class="row">
+                                  <div class="col-12 mb-3">
+                                    <div class="float-right mt-0" style="margin-left: 100px;">
+                                      <button type="button" class="btn btn-primary btn-rounded btn-icon" data-toggle="tooltip" data-placement="right" title="Open">
+                                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                      </button>                                                                            
+                                    </div> 
+                                    
+                                    <span class="text-secondary"><i class="far fa-calendar-check"></i> <b>Due Date:</b> November 16 2022 - 04:40 PM</span>
+                                    <p class="m-0">
+                                      90 days Onboarding Checklist
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <div class="progress" style="height: 20px;">
+                                      <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div> 
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <span class="badge badge-dark float-right ml-2">
+                                      <b>Completition:</b> Pending
+                                    </span>
+                                    <span class="badge badge-warning float-right ml-2">
+                                      <b>Priority:</b> Normal
+                                    </span>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion collapase-card" id="accordionPostAssignment3">
+                          <div class="card bg-light border mb-2">
+                            <div class="card-header" id="postAssignment3">
+                              <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#accordionSectionPostAssignment3" aria-expanded="true" aria-controls="accordionSectionPostAssignment3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25px" height="25px"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M336 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM141.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L153.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L254 299l30.9-82.4 5.1 12.3C305 264.7 339.9 288 378.7 288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H378.7c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L73.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM107.2 352H48c-17.7 0-32 14.3-32 32s14.3 32 32 32h69.6c19 0 36.2-11.2 43.9-28.5L173 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L107.2 352z"/></svg>
+                                <span class="h5 font-weight-bold mx-2">Limit First Day Paper Work</span>
+                                <span class="badge badge-danger ml-2">
+                                  <b>Time Status:</b> Overdue
+                                </span>
+                              </a>
+                            </div>
+                            <div id="accordionSectionPostAssignment3" class="collapse" aria-labelledby="postAssignment3" data-parent="#accordionPostAssignment3">
+                              <div class="card-body pt-4">
+                                <div class="row">
+                                  <div class="col-12 mb-3">
+                                    <div class="float-right mt-0" style="margin-left: 100px;">
+                                      <button type="button" class="btn btn-primary btn-rounded btn-icon" data-toggle="tooltip" data-placement="right" title="Open">
+                                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                      </button>                                                                            
+                                    </div> 
+                                    
+                                    <span class="text-secondary"><i class="far fa-calendar-check"></i> <b>Due Date:</b> November 16 2022 - 04:40 PM</span>
+                                    <p class="m-0">
+                                      90 days Onboarding Checklist
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <div class="progress" style="height: 20px;">
+                                      <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div> 
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <span class="badge badge-dark float-right ml-2">
+                                      <b>Completition:</b> Pending
+                                    </span>
+                                    <span class="badge badge-warning float-right ml-2">
+                                      <b>Priority:</b> Normal
+                                    </span>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion collapase-card" id="accordionPostAssignment4">
+                          <div class="card bg-light border mb-2">
+                            <div class="card-header" id="postAssignment4">
+                              <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#accordionSectionPostAssignment4" aria-expanded="true" aria-controls="accordionSectionPostAssignment4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25px" height="25px"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M336 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM141.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L153.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L254 299l30.9-82.4 5.1 12.3C305 264.7 339.9 288 378.7 288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H378.7c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L73.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM107.2 352H48c-17.7 0-32 14.3-32 32s14.3 32 32 32h69.6c19 0 36.2-11.2 43.9-28.5L173 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L107.2 352z"/></svg>
+                                <span class="h5 font-weight-bold mx-2">Limit First Day Paper Work</span>
+                                <span class="badge badge-danger ml-2">
+                                  <b>Time Status:</b> Overdue
+                                </span>
+                              </a>
+                            </div>
+                            <div id="accordionSectionPostAssignment4" class="collapse" aria-labelledby="postAssignment4" data-parent="#accordionPostAssignment4">
+                              <div class="card-body pt-4">
+                                <div class="row">
+                                  <div class="col-12 mb-3">
+                                    <div class="float-right mt-0" style="margin-left: 100px;">
+                                      <button type="button" class="btn btn-primary btn-rounded btn-icon" data-toggle="tooltip" data-placement="right" title="Open">
+                                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                      </button>                                                                            
+                                    </div> 
+                                    
+                                    <span class="text-secondary"><i class="far fa-calendar-check"></i> <b>Due Date:</b> November 16 2022 - 04:40 PM</span>
+                                    <p class="m-0">
+                                      90 days Onboarding Checklist
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <div class="progress" style="height: 20px;">
+                                      <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div> 
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <span class="badge badge-dark float-right ml-2">
+                                      <b>Completition:</b> Pending
+                                    </span>
+                                    <span class="badge badge-warning float-right ml-2">
+                                      <b>Priority:</b> Normal
+                                    </span>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion collapase-card" id="accordionPostAssignment5">
+                          <div class="card bg-light border mb-2">
+                            <div class="card-header" id="postAssignment5">
+                              <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#accordionSectionPostAssignment5" aria-expanded="true" aria-controls="accordionSectionPostAssignment5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="25px" height="25px"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M184.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L39 113c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L39 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM256 96c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H288c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H288c-17.7 0-32-14.3-32-32zM192 416c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32zM80 464c-26.5 0-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48z"/></svg>
+                                <span class="h5 font-weight-bold mx-2">Limit First Day Paper Work</span>
+                                <span class="badge badge-danger ml-2">
+                                  <b>Time Status:</b> Overdue
+                                </span>
+                              </a>
+                            </div>
+                            <div id="accordionSectionPostAssignment5" class="collapse" aria-labelledby="postAssignment5" data-parent="#accordionPostAssignment5">
+                              <div class="card-body pt-4">
+                                <div class="row">
+                                  <div class="col-12 mb-3">
+                                    <div class="float-right mt-0" style="margin-left: 100px;">
+                                      <button type="button" class="btn btn-primary btn-rounded btn-icon" data-toggle="tooltip" data-placement="right" title="Open">
+                                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                      </button>                                                                            
+                                    </div> 
+                                    
+                                    <span class="text-secondary"><i class="far fa-calendar-check"></i> <b>Due Date:</b> November 16 2022 - 04:40 PM</span>
+                                    <p class="m-0">
+                                      90 days Onboarding Checklist
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <div class="progress" style="height: 20px;">
+                                      <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div> 
+                                  </div>
+                                  <div class="col-12 col-sm-6">
+                                    <span class="badge badge-dark float-right ml-2">
+                                      <b>Completition:</b> Pending
+                                    </span>
+                                    <span class="badge badge-warning float-right ml-2">
+                                      <b>Priority:</b> Normal
+                                    </span>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                      
+                      <nav aria-label="Page navigation example" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12 grid-margin grid-margin-lg-0 stretch-card collapase-card" id="accordionSchedule">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-header shadow-none bg-transparent" id="postSchedule">
+                  <a href="#" class="btn btn-header-link text-dark p-0" data-toggle="collapse" data-target="#accordionSectionSchedule" aria-expanded="true" aria-controls="accordionSectionSchedule">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18px" height="18px"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>
+                    <h4 class="card-title m-0 d-inline align-middle">Schedule</h4>
+                    <span class="badge badge-danger small">4</span>
+                  </a>
+                  </div>
+                  <div class="my-3">
+                    <hr>
+                  </div>
+                  <div id="accordionSectionSchedule" class="collapse show" aria-labelledby="postSchedule" data-parent="#accordionSchedule">
+                    <div id='calendar'></div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Other Dashboard Details</p>
+                  <p class="font-weight-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores id alias accusamus esse unde, quasi quia nemo impedit fuga deserunt magnam qui sapiente ullam adipisci explicabo ut totam? Assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores id alias accusamus esse unde, quasi quia nemo impedit fuga deserunt magnam qui sapiente ullam adipisci explicabo ut totam? Assumenda.</p>                                    
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022 - My Work Product. All rights reserved.</span>            
+          </div>          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <div id="loading">
+    <img src="images/emblem.png" alt="" id="animated-image">
+    <!-- Google Chrome -->
+    <div class="infinityChrome">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Safari and others -->
+    <div class="infinity">
+      <div>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>    
+  <script src="js/dashboard.js"></script> 
+  <script src="js/chart.js"></script>
+  <script src="js/calendar-main.js"></script>
+  
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous"></script> 
+  
+  <script src="js/custom/dashboard-chart.js"></script>
+  <script src="js/custom/calendar-config.js"></script>
+  <script src="js/custom/loader.js"></script>
+</body>
+
+</html>

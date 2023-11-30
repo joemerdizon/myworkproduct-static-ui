@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Work Product</title>
+  
+  <link rel="shortcut icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="vendors/feather/feather.css">  
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">  
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">  
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">  
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">    
+  <link rel="stylesheet" href="css/calendar-main.css">
+  <link rel="stylesheet" href="css/custom.css">      
+  <link rel="stylesheet" href="css/standard.css"> 
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">        
+
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>          
+          <li class="nav-item nav-settings d-none d-lg-flex mx-2">
+            <a class="nav-link" href="#">
+              <i class="ti-settings"></i>
+            </a>
+          </li>          
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face0.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="profile-information.html" class="dropdown-item">
+                <i class="ti-user text-primary"></i>
+                Profile
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->      
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <p class="settings-heading">SIDEBAR COLOR</p>
+        <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+        <p class="settings-heading mt-2">HEADER COLOR</p>
+        <div class="color-tiles mx-0 px-4">
+          <div class="tiles default"></div>
+          <div class="tiles dark"></div>                        
+          <div class="tiles"></div>     
+          <div class="tiles"></div>     
+          <div class="tiles success"></div>
+          <div class="tiles danger"></div>
+          <div class="tiles warning"></div>            
+          <div class="tiles info"></div>            
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">              
+              <i class="fa-solid fa-gauge menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
+              <i class="fa-solid fa-tasks menu-icon"></i>
+              <span class="menu-title">Task</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-task">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="create-workflow.html">Create Workflow</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-workflow.html">Assign Workflow</a></li>
+              </ul>
+            </div>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-reports" aria-expanded="false" aria-controls="nav-item-reports">
+              <i class="fa-solid fa-file-lines menu-icon"></i>
+              <span class="menu-title">Work Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-reports">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="view-work-product-template.html">View Work Product Template</a></li>
+                <li class="nav-item"> <a class="nav-link" href="generate-work-product.html">Generate Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-work-product.html">Assign Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">My Generated Work Product</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creators-hub.html">
+              <i class="fa-solid fa-desktop menu-icon"></i>
+              <span class="menu-title">Creators Hub</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">
+              <i class="fa-solid fa-ticket menu-icon"></i>
+              <span class="menu-title">Tickets</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-tickets">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="generate-ticket-report.html">Generate Ticket Report</a></li>
+                <li class="nav-item"> <a class="nav-link" href="submit-a-ticket.html">Submit a Ticket</a></li>
+              </ul>
+            </div>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-approval" aria-expanded="false" aria-controls="nav-item-approval">
+              <i class="fa-solid fa-thumbs-up menu-icon"></i>
+              <span class="menu-title">Approval</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-approval">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#">Request</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Submit</a></li>
+              </ul>
+            </div>
+          </li>                   
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">              
+              <i class="fa-solid fa-laptop-file menu-icon"></i>
+              <span class="menu-title">Files</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="comments-and-notes.html">              
+              <i class="fa-solid fa-comments menu-icon"></i>
+              <span class="menu-title">Comments and Notes</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="market-place.html">              
+              <i class="fa-solid fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">Market Place</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">              
+              <i class="fa-solid fa-phone-square menu-icon"></i>
+              <span class="menu-title">Contacts</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-settings" aria-expanded="false" aria-controls="nav-item-settings">
+              <i class="fa-solid fa-cogs menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-settings">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="import-task-categories-and-sub-categories.html">Import Data</a></li>
+              </ul>
+            </div>
+          </li>          
+        </ul>
+      </nav>
+      <!-- partial -->
+
+      <div class="main-panel">
+        <div class="content-wrapper">          
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">                 
+                  <p class="card-title">
+                    <i class="fa-solid fa-arrows-turn-to-dots mr-2"></i>
+                    Create Workflow
+                    <button type="button" class="btn btn-primary btn-sm btn-icon-text float-right">
+                      <i class="fa-solid fa-save mr-2"></i>
+                      Save Workflow
+                    </button>
+                  </p>
+                  <div class="my-3">
+                    <hr>
+                  </div>
+                  <form>
+                    <div class="form-group mb-0 row">
+                      <label for="category" class="col-sm-3 col-form-label text-right required">Category</label>
+                      <div class="col-sm-6">
+                        <select id="category" class="form-control" required>
+													<option disabled selected></option>
+													<option value="Sample Category 1">Sample Category 1</option>
+													<option value="Sample Category 2">Sample Category 2</option>
+                          <option value="Sample Category 3">Sample Category 3</option>
+                          <option value="Sample Category 4">Sample Category 4</option>
+												</select>
+                      </div>
+                    </div>
+                    <div class="form-group mb-0 row">
+                      <label for="sub_category" class="col-sm-3 col-form-label text-right required">Sub Category</label>
+                      <div class="col-sm-6">
+                        <select id="sub_category" class="form-control" required>
+													<option disabled selected></option>
+													<option value="Sample Sub Category 1">Sample Sub Category 1</option>
+													<option value="Sample Sub Category 2">Sample Sub Category 2</option>
+                          <option value="Sample Sub Category 3">Sample Sub Category 3</option>
+                          <option value="Sample Sub Category 4">Sample Sub Category 4</option>
+												</select>
+                      </div>
+                    </div>             
+                    <div class="form-group mb-0 row">
+                      <label for="name" class="col-sm-3 col-form-label text-right required">Name</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="name">
+                      </div>
+                    </div> 
+                    <div class="form-group mb-0 row">
+                      <label for="tags" class="col-sm-3 col-form-label text-right required">Approver Required</label>
+                      <div class="col-sm-6">
+                        <div class="switchToggle">
+                          <div class="switchToggle">
+                            <div class="custom-toggle">
+                              <label class="switch switch-left-right">
+                                <input class="switch-input" type="checkbox">
+                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                <span class="switch-handle"></span>
+                              </label>
+                            </div>
+                          </div> 
+                        </div>                     
+                      </div>
+                    </div>
+                    <div class="form-group mb-0 row">
+                      <label for="tags" class="col-sm-3 col-form-label text-right required">File Upload Required</label>
+                      <div class="col-sm-6">
+                        <div class="switchToggle">
+                          <div class="switchToggle">
+                            <div class="custom-toggle">
+                              <label class="switch switch-left-right">
+                                <input class="switch-input" type="checkbox">
+                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                <span class="switch-handle"></span>
+                              </label>
+                            </div>
+                          </div> 
+                        </div>                     
+                      </div>
+                    </div>  
+                    <div class="form-group mb-0 row">
+                      <label for="tags" class="col-sm-3 col-form-label text-right required">Comment Required</label>
+                      <div class="col-sm-6">
+                        <div class="switchToggle">
+                          <div class="switchToggle">
+                            <div class="custom-toggle">
+                              <label class="switch switch-left-right">
+                                <input class="switch-input" type="checkbox">
+                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                <span class="switch-handle"></span>
+                              </label>
+                            </div>
+                          </div> 
+                        </div>                     
+                      </div>
+                    </div>  
+                    <div class="form-group mb-0 row">
+                      <label for="tags" class="col-sm-3 col-form-label text-right required">Add Action Items</label>
+                      <div class="col-sm-6">
+                        <button type="button" class="btn btn-primary btn-sm text-left" data-toggle="modal" data-target="#modal-add-action-items">
+                          <i class="fa fa-plus-circle mr-2"></i> Add Action Items
+                        </button>           
+                      </div>
+                    </div>  
+                  </form>
+                </div>
+              </div>
+            </div>            
+
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body pb-5">
+                  <p class="card-title">
+                    <i class="fa-solid fa-arrows-turn-to-dots mr-2"></i>
+                    Create Workflow List
+                  </p>
+                  <div class="my-3">
+                    <hr>
+                  </div>
+                  <table class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                      <tr>
+                          <th class="col-2">Category</th>
+                          <th class="col-2">Sub Category</th>
+                          <th class="col-2">Name</th>
+                          <th class="col-1">Approver Required</th>
+                          <th class="col-1">File Upload Required</th>
+                          <th class="col-1">Comment Required</th>
+                          <th class="col-3">Options</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>Category 1</td>
+                          <td>Sub Category 1</td>
+                          <td>Name 1</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td class="py-0 px-5">
+                            <button type="button" class="btn btn-success btn-sm text-left" data-toggle="modal" data-target="#modal-edit-workflow-items">
+                              <i class="fa-solid fa-pen-to-square mr-2"></i> Edit Workflow
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm text-left" data-toggle="modal" data-target="#modal-view-action-items">
+                              <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View Action Items
+                            </button>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>Category 2</td>
+                        <td>Sub Category 2</td>
+                        <td>Name 2</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td class="py-0 px-5">
+                          <button type="button" class="btn btn-success btn-sm text-left" data-toggle="modal" data-target="#modal-edit-workflow-items">
+                            <i class="fa-solid fa-pen-to-square mr-2"></i> Edit Workflow
+                          </button>
+                          <button type="button" class="btn btn-primary btn-sm text-left" data-toggle="modal" data-target="#modal-view-action-items">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View Action Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Category 3</td>
+                        <td>Sub Category 3</td>
+                        <td>Name 3</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td class="py-0 px-5">
+                          <button type="button" class="btn btn-success btn-sm text-left" data-toggle="modal" data-target="#modal-edit-workflow-items">
+                            <i class="fa-solid fa-pen-to-square mr-2"></i> Edit Workflow
+                          </button>
+                          <button type="button" class="btn btn-primary btn-sm text-left" data-toggle="modal" data-target="#modal-view-action-items">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View Action Items
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+
+        <div class="modal fade" id="modal-add-action-items" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">              
+              <div class="modal-header p-3 pr-4">
+                <h5 class="modal-title"><i class="mdi  mdi mdi-format-indent-increase"></i> Add Reference</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body p-4 overflow-auto" style="height: 500px; scrollbar-width: thin; background: #f5f7ff">
+                <div class="row">
+                  <div class="col-12 col-sm-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title">
+                          <i class="fa-solid fa-plus-circle mr-2"></i>
+                          Add Action Items
+                        </p>
+                        <div class="my-3">
+                          <hr>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control" id="action_item" placeholder="Action Item">
+                          </div>
+                        </div> 
+                        <div class="form-group row">
+                          <div class="col-sm-12">
+                            <textarea class="form-control" id="description" rows="4" placeholder="Description"></textarea>
+                          </div>
+                        </div> 
+                        <button type="button" class="btn btn-primary btn-sm float-right">
+                          <i class="fa fa-plus-circle mr-2"></i>
+                          Add
+                        </button>             
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-8">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title">
+                          <i class="fa-fw fa-solid fa-person-running mr-2"></i>
+                          List of Action Items
+                        </p>
+                        <div class="my-3">
+                          <hr>
+                        </div>
+                        <table class="table table-striped table-bordered" style="width:100%">
+                          <thead>
+                            <tr>
+                                <th class="col-5">Action Items</th>
+                                <th class="col-5">Description</th>
+                                <th class="col-2">Options</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td>Action Item 1</td>
+                                <td>Description 1</td>
+                                <td class="py-0 px-5">
+                                  <button type="button" class="btn btn-success btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+                                    <i class="fas fa-edit" aria-hidden="true"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Remove">
+                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                  </button>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>Action Item 2</td>
+                              <td>Description 2</td>
+                              <td class="py-0 px-5">
+                                  <button type="button" class="btn btn-success btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+                                    <i class="fas fa-edit" aria-hidden="true"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Remove">
+                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                  </button>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>Action Item 3</td>
+                              <td>Description 3</td>
+                              <td class="py-0 px-5">
+                                  <button type="button" class="btn btn-success btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+                                    <i class="fas fa-edit" aria-hidden="true"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Remove">
+                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                  </button>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer py-2">   
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-ban pr-2"></i> Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-view-action-items" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">              
+              <div class="modal-header p-3 pr-4">
+                <h5 class="modal-title"><i class="mdi  mdi mdi-format-indent-increase"></i> View Reference</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body p-4 overflow-auto" style="height: 500px; scrollbar-width: thin; background: #f5f7ff">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title">
+                          <i class="fa-fw fa-solid fa-person-running mr-2"></i>
+                          List of Action Items
+                        </p>
+                        <div class="my-3">
+                          <hr>
+                        </div>
+                        <table class="table table-striped table-bordered" style="width:100%">
+                          <thead>
+                            <tr>
+                                <th class="col-5">Action Items</th>
+                                <th class="col-5">Description</th>
+                                <th class="col-2">Options</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td>Action Item 1</td>
+                                <td>Description 1</td>
+                                <td class="py-0 px-5">
+                                  <button type="button" class="btn btn-success btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+                                    <i class="fas fa-edit" aria-hidden="true"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Remove">
+                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                  </button>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>Action Item 2</td>
+                              <td>Description 2</td>
+                              <td class="py-0 px-5">
+                                  <button type="button" class="btn btn-success btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+                                    <i class="fas fa-edit" aria-hidden="true"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Remove">
+                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                  </button>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>Action Item 3</td>
+                              <td>Description 3</td>
+                              <td class="py-0 px-5">
+                                  <button type="button" class="btn btn-success btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+                                    <i class="fas fa-edit" aria-hidden="true"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger btn-rounded btn-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Remove">
+                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                  </button>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer py-2">   
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-ban pr-2"></i> Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-edit-workflow-items" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">              
+              <div class="modal-header p-3 pr-4">
+                <h5 class="modal-title"><i class="fa-solid fa-arrows-turn-to-dots mr-2"></i> Edit Workflow</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body p-4 overflow-auto" style="height: 510px; scrollbar-width: thin; background: #f5f7ff">
+                <div class="row">
+                  <div class="col-12 col-sm-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title">
+                          <i class="fa-solid fa-pen-to-square mr-2"></i>
+                          Edit Action Items
+                        </p>
+                        <div class="my-3">
+                          <hr>
+                        </div>
+                        <div class="form-group mb-0 row">
+                          <label for="category" class="col-sm-4 col-form-label text-right required">Category</label>
+                          <div class="col-sm-6">
+                            <select id="category" class="form-control" required>
+                              <option disabled selected></option>
+                              <option value="Sample Category 1">Sample Category 1</option>
+                              <option value="Sample Category 2">Sample Category 2</option>
+                              <option value="Sample Category 3">Sample Category 3</option>
+                              <option value="Sample Category 4">Sample Category 4</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0 row">
+                          <label for="sub_category" class="col-sm-4 col-form-label text-right required">Sub Category</label>
+                          <div class="col-sm-6">
+                            <select id="sub_category" class="form-control" required>
+                              <option disabled selected></option>
+                              <option value="Sample Sub Category 1">Sample Sub Category 1</option>
+                              <option value="Sample Sub Category 2">Sample Sub Category 2</option>
+                              <option value="Sample Sub Category 3">Sample Sub Category 3</option>
+                              <option value="Sample Sub Category 4">Sample Sub Category 4</option>
+                            </select>
+                          </div>
+                        </div>             
+                        <div class="form-group mb-0 row">
+                          <label for="name" class="col-sm-4 col-form-label text-right required">Name</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                        </div> 
+                        <div class="form-group mb-0 row">
+                          <label for="tags" class="col-sm-4 col-form-label text-right required">Approver Required</label>
+                          <div class="col-sm-6">
+                            <div class="switchToggle">
+                              <div class="switchToggle">
+                                <div class="custom-toggle">
+                                  <label class="switch switch-left-right">
+                                    <input class="switch-input" type="checkbox">
+                                    <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                    <span class="switch-handle"></span>
+                                  </label>
+                                </div>
+                              </div> 
+                            </div>                     
+                          </div>
+                        </div>
+                        <div class="form-group mb-0 row">
+                          <label for="tags" class="col-sm-4 col-form-label text-right required">File Upload Required</label>
+                          <div class="col-sm-6">
+                            <div class="switchToggle">
+                              <div class="switchToggle">
+                                <div class="custom-toggle">
+                                  <label class="switch switch-left-right">
+                                    <input class="switch-input" type="checkbox">
+                                    <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                    <span class="switch-handle"></span>
+                                  </label>
+                                </div>
+                              </div> 
+                            </div>                     
+                          </div>
+                        </div>  
+                        <div class="form-group mb-0 row">
+                          <label for="tags" class="col-sm-4 col-form-label text-right required">Comment Required</label>
+                          <div class="col-sm-6">
+                            <div class="switchToggle">
+                              <div class="switchToggle">
+                                <div class="custom-toggle">
+                                  <label class="switch switch-left-right">
+                                    <input class="switch-input" type="checkbox">
+                                    <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                    <span class="switch-handle"></span>
+                                  </label>
+                                </div>
+                              </div> 
+                            </div>                     
+                          </div>
+                        </div>             
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer py-2">   
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-ban pr-2"></i> Cancel</button>
+                <button type="button" class="btn btn-success btn-sm float-right">
+                  <i class="fa-solid fa-pen-to-square mr-2"></i>
+                  Edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022 - My Work Product. All rights reserved.</span>            
+          </div>          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>    
+  <script src="js/dashboard.js"></script> 
+  <script src="js/chart.js"></script>
+  <script src="js/calendar-main.js"></script>
+
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous"></script> 
+  
+  <script>
+    $(document).ready(function() {
+        $('#data-table-generate-report').DataTable();
+        $('#data-table-generate-report-action-related-objectives').DataTable();
+        $('#data-table-generate-report-action-items').DataTable();
+    });
+
+    function launchReportActionModal() {
+      $('#modal-fullscreen-xl-generate-report-action').modal('show');
+      console.log("dasda");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Work Product</title>
+  <link rel="shortcut icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="vendors/feather/feather.css">  
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">   
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">  
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">    
+  <link rel="stylesheet" href="css/calendar-main.css">
+  <link rel="stylesheet" href="css/custom.css">   
+  <link rel="stylesheet" href="css/standard.css"> 
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">        
+
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>          
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="ti-settings mx-2"></i>
+            </a>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face0.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="profile-information.html" class="dropdown-item">
+                <i class="ti-user text-primary"></i>
+                Profile
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    
+    <div class="container-fluid page-body-wrapper">      
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <p class="settings-heading">SIDEBAR COLOR</p>
+        <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+        <p class="settings-heading mt-2">HEADER COLOR</p>
+        <div class="color-tiles mx-0 px-4">
+          <div class="tiles default"></div>
+          <div class="tiles dark"></div>                        
+          <div class="tiles"></div>     
+          <div class="tiles"></div>     
+          <div class="tiles success"></div>
+          <div class="tiles danger"></div>
+          <div class="tiles warning"></div>            
+          <div class="tiles info"></div>            
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">              
+              <i class="fa-solid fa-gauge menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
+              <i class="fa-solid fa-tasks menu-icon"></i>
+              <span class="menu-title">Task</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-task">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="create-workflow.html">Create Workflow</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-workflow.html">Assign Workflow</a></li>
+              </ul>
+            </div>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-reports" aria-expanded="false" aria-controls="nav-item-reports">
+              <i class="fa-solid fa-file-lines menu-icon"></i>
+              <span class="menu-title">Work Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-reports">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="view-work-product-template.html">View Work Product Template</a></li>
+                <li class="nav-item"> <a class="nav-link" href="generate-work-product.html">Generate Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-work-product.html">Assign Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">My Generated Work Product</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creators-hub.html">
+              <i class="fa-solid fa-desktop menu-icon"></i>
+              <span class="menu-title">Creators Hub</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">
+              <i class="fa-solid fa-ticket menu-icon"></i>
+              <span class="menu-title">Tickets</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-tickets">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="generate-ticket-report.html">Generate Ticket Report</a></li>
+                <li class="nav-item"> <a class="nav-link" href="submit-a-ticket.html">Submit a Ticket</a></li>
+              </ul>
+            </div>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-approval" aria-expanded="false" aria-controls="nav-item-approval">
+              <i class="fa-solid fa-thumbs-up menu-icon"></i>
+              <span class="menu-title">Approval</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-approval">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#">Request</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Submit</a></li>
+              </ul>
+            </div>
+          </li>                   
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">              
+              <i class="fa-solid fa-laptop-file menu-icon"></i>
+              <span class="menu-title">Files</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="comments-and-notes.html">              
+              <i class="fa-solid fa-comments menu-icon"></i>
+              <span class="menu-title">Comments and Notes</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="market-place.html">              
+              <i class="fa-solid fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">Market Place</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">              
+              <i class="fa-solid fa-phone-square menu-icon"></i>
+              <span class="menu-title">Contacts</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-settings" aria-expanded="false" aria-controls="nav-item-settings">
+              <i class="fa-solid fa-cogs menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-settings">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="import-task-categories-and-sub-categories.html">Import Data</a></li>
+              </ul>
+            </div>
+          </li>          
+        </ul>
+      </nav>
+      <!-- partial -->
+
+      <div class="main-panel">
+        <div class="content-wrapper">          
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">
+                    <i class="fa fa-desktop"></i> 
+                    Creators Hub
+                    <small>(Create Report)</small>
+                  </p>
+                  <div class="my-3">
+                    <hr>
+                  </div>
+                  <form>
+                    <div class="form-group mb-0 row">
+                      <label for="name_of_report" class="col-sm-3 col-form-label text-right required">Name of Report</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="name_of_report">
+                      </div>
+                    </div>
+                    <div class="form-group mb-0 row">
+                      <label for="status" class="col-sm-3 col-form-label text-right required">Status</label>
+                      <div class="col-sm-6">
+                        <select id="status" class="form-control" required>
+													<option disabled selected></option>
+													<option value="Active">Active</option>
+													<option value="Inactive">Inactive</option>													
+												</select>
+                      </div>
+                    </div>                 
+                    <div class="form-group mb-0 row">
+                      <label for="tags" class="col-sm-3 col-form-label text-right required">Tags</label>
+                      <div class="col-sm-6">
+                        <input type="text" data-role="tagsinput" id="tags" class="form-control">     
+                        <small class="form-text text-muted">Use comma "," to separate tags from each other.</small>                   
+                      </div>
+                    </div>
+                    <div class="form-group mb-0 row">
+                      <label for="tags" class="col-sm-3 col-form-label text-right">Allow Assignment</label>
+                      <div class="col-sm-6 pt-2">
+                        <div class="custom-toggle">
+                          <label class="switch switch-left-right">
+                            <input class="switch-input" type="checkbox">
+                            <span class="switch-label" data-on="Yes" data-off="No"></span>
+                            <span class="switch-handle"></span>
+                          </label>
+                        </div>                     
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>            
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col-md-12 col-12">
+                      <p class="card-title">   
+                        <i class="fa-solid fa-list-check"></i>                  
+                        Template Tasks
+                      </p>
+                      <div class="my-3">
+                        <hr>
+                      </div>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                        <div class="input-group-append">
+                          <button class="btn btn-sm btn-primary" type="button">
+                            <i class="icon-search"></i>                                    
+                            Search
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-12 col-12 mb-3">
+                      <div id="accordion-reference-legends" class="myaccordion w-100 rounded">
+                        <div class="card">
+                          <div class="card-header p-0 bg-primary border-0" id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseReference" aria-expanded="false" aria-controls="collapseReference">
+                                <p class="mb-0 text-white">Reference Legends</p>
+                                <i class="fa" aria-hidden="true"></i>
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseReference" class="collapse bg-light" aria-labelledby="headingOne" data-parent="#accordion-reference-legends">
+                            <div class="card-body px-0">
+                              <div class="mt-2 pb-4">
+                                <span class="d-block">
+                                  <i class="fa-fw fa-solid fa-folder-plus mr-2 text-primary"></i>Category
+                                </span>
+                                <span class="d-block text">
+                                  <i class="fa-fw fa-solid fa-folder-tree mr-2 text-dark"></i>Sub Category
+                                </span>
+                                <span class="d-block text">
+                                  <i class="fa-fw fa-solid fa-person-running mr-2 text-warning"></i>Action Item
+                                </span>
+                                <span class="d-block text">
+                                  <i class="fa-fw fa-solid fa-file-circle-check mr-2 text-success"></i>Approved Task Template
+                                </span>
+                                <span class="d-block text">
+                                  <i class="fa-fw fa-solid fa-file-circle-xmark mr-2 text-danger"></i>Not Approved Task Template
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-12 col-12">
+                      <div class="my-3">
+                        <hr>
+                      </div>
+                      <p class="font-weight-bold">Reference</p>
+                      <div class="col-12 p-0">
+                        <ul id="tree1">      
+                          <li><input type="checkbox" class="item1" id="item1" data-content=""> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#"> </a>
+                            <ul>
+                              <li><input type="checkbox" class="item1" id="item1sub1" data-content="Sub Item 1"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Sub Item 1</li>
+                              <li><input type="checkbox" class="item1" id="item1sub2" data-content="Sub Item 2"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i></i>Sub Item 2
+                                <ul>
+                                  <li><input type="checkbox" class="item1" id="item1subsub1" data-content="Sub Sub Item 1"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>Sub Sub Item 1
+                                    <ul>
+                                        <li><input type="checkbox" class="item1" id="item1subsubsub1" data-content="Sub Sub Sub 1"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Sub Sub Sub 1</li>
+                                        <li><input type="checkbox" class="item1" id="item1subsubsub2" data-content="Sub Sub Sub 2"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Sub Sub Sub 2</li>
+                                        <li><input type="checkbox" class="item1" id="item1subsubsub3" data-content="Sub Sub Sub 3"> <i class="fa-solid fa-file-circle-xmark mx-1 text-danger"></i>Sub Sub Sub 3</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><input type="checkbox" class="item1" id="item1sub3" data-content="Sub Item 3"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Sub Item 3</li>
+                            </ul>
+                          </li>                                      
+                          <li><input type="checkbox" class="item2" id="item2" data-content="<h5 class='m-0 py-2 border-bottom'><b>Business Practice Management</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Business Practice Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item2" id="item2sub1" data-content="<p class='m-0 py-2 border-bottom'><b>Warranties</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Warranties  
+                                <ul>
+                                  <li><input type="checkbox" class="item2" id="item2subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Warranty Checklist <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>Warranty Checklist
+                                    <ul>
+                                        <li><input type="checkbox" class="item2" id="item2subsubsub1" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Clinic 1 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Clinic 1</li>
+                                        <li><input type="checkbox" class="item2" id="item2subsubsub2" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Clinic 2 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-xmark mx-1 text-danger"></i>Clinic 2</li>
+                                        <li><input type="checkbox" class="item2" id="item2subsubsub3" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Workstation 1 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Workstation 1</li>
+                                    </ul>
+                                  </li>                              
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item3" id="item3" data-content="<h5 class='m-0 py-2 border-bottom'><b>Change Management</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Change Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item3" id="item3sub1" data-content="<p class='m-0 py-2 border-bottom'><b>New System Implementation</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>New System Implementation  
+                                <ul>
+                                  <li><input type="checkbox" class="item3" id="item3subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>CyberKnife Implementation Checklist<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>CyberKnife Implementation Checklist</li>                              
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item4" id="item4" data-content="<h5 class='m-0 py-2 border-bottom'><b>Competency</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Competency</a>
+                            <ul>
+                              <li><input type="checkbox" class="item4" id="item4sub1" data-content="<p class='m-0 py-2 border-bottom'><b>Doctors Workstation Acquisition</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Doctor's Workstation Acquisition  
+                                <ul>
+                                  <li><input type="checkbox" class="item4" id="item4subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Knows to check daily QC on Radiologist Workstation<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Knows to check daily QC on Radiologist Workstation</li>
+                                  <li><input type="checkbox" class="item4" id="item4subsub2" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Can bring patient up on Monitor<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Can bring patient up on Monitor</li>
+                                </ul>                            
+                              </li>
+                              <li><input type="checkbox" class="item4" id="item4sub2" data-content="<p class='m-0 py-2 border-bottom'><b>Operation of GE Workstation</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Operation of GE Workstation</li>
+                              <li><input type="checkbox" class="item4" id="item4sub3" data-content="<p class='m-0 py-2 border-bottom'><b>Receptionist Workflows and Procedures</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Receptionist Workflows and Procedures</li>
+                              <li><input type="checkbox" class="item4" id="item4sub4" data-content="<p class='m-0 py-2 border-bottom'><b>Technologist Workflows and Procedures</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Technologist Workflows and Procedures</li>
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item5" id="item5"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Credentialing</a>
+                            <ul>
+                              <li><input type="checkbox" class="item5" id="item5sub1">  </li>                          
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item6" id="item6"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Credentialing Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item6" id="item6sub1">  </li>                          
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item7" id="item7"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Cultural Contribution</a>
+                            <ul>
+                              <li><input type="checkbox" class="item7" id="item7sub1">  </li>                          
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item8" id="item8"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Knowledge Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item8" id="item8sub1">  </li>                          
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item9" id="item9"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Operations Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item9" id="item9sub1">  </li>                          
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item10" id="item10"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Personnel Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item10" id="item10sub1">  </li>                          
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item11" id="item11"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Practice Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item11" id="item11sub1">  </li>                          
+                            </ul>
+                          </li>
+                          <li><input type="checkbox" class="item12" id="item12"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Process Management</a>
+                            <ul>
+                              <li><input type="checkbox" class="item12" id="item12sub1">  </li>                          
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+
+            <div class="col-md-8 col-12 align-items-stretch">
+              <div class="row">
+                <div class="col-md-12 col-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-12 col-12">
+                          <p class="card-title">                  
+                            <i class="fa-solid fa-clipboard-list"></i> 
+                            Template Options
+                          </p>                      
+                          <div class="my-3">
+                            <hr>
+                          </div>                                                
+                        </div>
+                        <div class="col-12" style="display: inline-block;">
+                          <button type="button" class="btn btn-outline-light btn-icon-text btn-sm">
+                            <i class="fa fa-upload"></i> Publish
+                          </button>
+                          <button type="button" class="btn btn-outline-light btn-icon-text btn-sm">
+                            <i class="fa fa-vial"></i> Simulate Again
+                          </button>
+                          <button type="button" class="btn btn-outline-light btn-icon-text btn-sm">
+                            <i class="fa fa-paper-plane"></i> Send for Approval
+                          </button>                              
+                          <div class="float-right">
+                            <button type="button" class="btn btn-outline-danger btn-icon-text btn-sm">
+                              <i class="fa fa-window-close"></i> Cancel
+                            </button>
+                            <button type="button" class="btn btn-outline-success btn-icon-text btn-sm">
+                              <i class="fa fa-save"></i> Save
+                            </button>                        
+                          </div>                              
+                        </div>                   
+                      </div>                                    
+                    </div>
+                  </div>              
+                </div>
+               
+                <div class="col-md-12 col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">                                                
+                        <div class="col-12">
+                          <h3 class="text-center font-weight-bold pb-4 text-muted">
+                            Report Header
+                          </h3>
+                          <div class="card mb-3 rounded-0">
+                            <div id="accordion-template-sections" class="myaccordion w-100">
+                              <div class="card">
+                                <div class="card-header p-0" id="headingOneTemplateSections">
+                                  <h2 class="mb-0">                                      
+                                    <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOneTemplateSections" aria-expanded="false" aria-controls="collapseOneTemplateSections" disabled>
+                                      <div class="text-left">
+                                        <h4 class="text-muted font-weight-bold m-0 mb-1">Section Header 1</h4>                         
+                                        <small class="text-muted d-block">Sample Header Section Sub 1</small>
+                                      </div>
+                                      <div class="float-right">
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-circle-minus"></i>
+                                        </a>
+                                        <i class="mx-1 fa" aria-hidden="true"></i>
+                                      </div>                                                                            
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseOneTemplateSections" class="collapse show" aria-labelledby="headingOneTemplateSections" data-parent="#accordion-template-sections">
+                                  <div class="card-body px-3" style="pointer-events:none;">
+                                    <div class="text-muted col-12 my-4">
+                                      <div class="col-12 border-bottom py-2 px-0">
+                                        <div class="float-right">
+                                          <a href="#" class="text-muted mx-1 text-decoration-none" onclick="">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                          </a>
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                          </a>
+                                        </div>
+                                        <h5 class="font-weight-bold m-0">Category</h5>
+                                      </div>
+                                      <div class="col-12 border-bottom py-2 px-0">
+                                        <div class="float-right">                                  
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-eye"></i>
+                                          </a>
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                          </a>
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                          </a>
+                                        </div>
+                                        <p class="font-weight-bold m-0">Sub Category</p>
+                                      </div>                        
+                                      <div class="col-12 border-bottom py-2 px-0">
+                                        <div class="float-right">                                                                    
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                          </a>
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                          </a>
+                                        </div>
+                                        <p class="m-0 pl-4">Action Item 1</p>
+                                      </div>
+                                      <div class="col-12 border-bottom py-2 px-0">
+                                        <div class="float-right">                                                                    
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                          </a>
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                          </a>
+                                        </div>
+                                        <p class="m-0 pl-4">Action Item 2</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">
+                                        <div class="float-right">                                                                    
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                          </a>
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-circle-minus"></i>
+                                          </a>
+                                        </div>
+                                        <p class="m-0 pl-4">Action Item 3</p>
+                                      </div>  
+                                    </div>                                    
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="card">
+                                <div class="card-header p-0" id="headingTwoTemplateSections">
+                                  <h2 class="mb-0">                                      
+                                    <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoTemplateSections" aria-expanded="false" aria-controls="collapseTwoTemplateSections" disabled>
+                                      <div class="text-left">
+                                        <h4 class="text-muted font-weight-bold m-0 mb-1">Section Header 2</h4>                         
+                                        <small class="text-muted d-block">Sample Header Section Sub 2</small>
+                                      </div>
+                                      <div class="float-right">
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-circle-minus"></i>
+                                        </a>
+                                        <i class="mx-1 fa" aria-hidden="true"></i>
+                                      </div>                                                                            
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseTwoTemplateSections" class="collapse" aria-labelledby="headingTwoTemplateSections" data-parent="#accordion-template-sections">
+                                  <div class="card-body px-3">                                    
+                                  </div>
+                                </div>
+                              </div> 
+                            </div>                            
+                          </div>
+                          <p class="text-muted text-right pt-2">
+                            Report Footer
+                          </p>
+                        </div>
+                      </div>                                    
+                    </div>
+                  </div>              
+                </div>
+
+                <!-- partial:partials/_settings-panel.html -->
+                <div class="theme-setting-wrapper">
+                  <div id="settings-trigger">
+                    <i class="fa-solid fa-chevron-left"></i>          
+                  </div>
+                  <div id="theme-settings" class="settings-panel">
+                    <i class="settings-close ti-close"></i>
+                    <p class="settings-heading">PALLET CONTAINER</p>
+
+                    <div id="accordion" class="myaccordion w-100">
+                      <div class="card">
+                        <div class="card-header p-0" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <p class="mb-0">General</p>
+                              <i class="fa" aria-hidden="true"></i>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body px-3">
+                            <div class="col-12 my-4">
+                              <button type="button" class="btn btn-primary btn-sm btn-block">
+                                <i class="mdi mdi-format-vertical-align-top"></i>
+                                Add Header
+                              </button>
+                              <button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#modal-add-section">
+                                <i class="mdi  mdi mdi-format-indent-increase"></i>
+                                Add Section
+                              </button>
+                              <button type="button" class="btn btn-primary btn-sm btn-block">
+                                <i class="mdi mdi-format-vertical-align-bottom"></i>
+                                Add Footer
+                              </button>                       
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="card">
+                        <div class="card-header p-0" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <p class="mb-0">Organization</p>
+                              <i class="fa" aria-hidden="true"></i>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body px-3">
+                            <div class="col-12 mt-4">            
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input">
+                                  Promotion
+                                <i class="input-helper"></i></label>
+                              </div>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input">
+                                  Demotion
+                                <i class="input-helper"></i></label>
+                              </div>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input">
+                                  Maintained
+                                <i class="input-helper"></i></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+
+        <div class="modal fade" id="modal-add-section" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">              
+              <div class="modal-header p-3 pr-4">
+                <h5 class="modal-title"><i class="mdi  mdi mdi-format-indent-increase"></i> Add Section</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body p-1 py-2 overflow-auto" style="height: 390px; scrollbar-width: thin;">
+                <form class="p-4">                  
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" cols="30" rows="10"></textarea>                    
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer py-2">                
+                <button type="button" class="btn btn-primary btn-sm">Save</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022 - My Work Product. All rights reserved.</span>            
+          </div>          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>    
+  <script src="js/dashboard.js"></script> 
+  <script src="js/chart.js"></script>
+  <script src="js/calendar-main.js"></script>
+
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous"></script> 
+  
+  <script>
+    $.fn.extend({
+        treed: function (o) {          
+          var openedClass = 'fa-minus-circle';
+          var closedClass = 'fa-plus-circle';
+          
+          if (typeof o != 'undefined'){
+            if (typeof o.openedClass != 'undefined'){
+              openedClass = o.openedClass;
+            }
+            if (typeof o.closedClass != 'undefined'){
+              closedClass = o.closedClass;
+            }
+          };
+          
+          //initialize each of the top levels
+          var tree = $(this);
+          tree.addClass("tree");
+          tree.find('li').has("ul").each(function () {
+            var branch = $(this); //li with children ul
+            branch.prepend("<i class='indicator fa " + closedClass + "'></i>");
+            branch.addClass('branch');
+            branch.on('click', function (e) {
+              if (this == e.target) {
+                var icon = $(this).children('i:first');
+                icon.toggleClass(openedClass + " " + closedClass);
+                $(this).children().children().toggle();
+              }
+            })
+            branch.children().children().toggle();
+          });
+          
+          //fire event from the dynamically added icon
+          tree.find('.branch .indicator').each(function(){
+            $(this).on('click', function () {
+              $(this).closest('li').click();
+            });
+          });
+          
+          //fire event to open branch if the li contains an anchor instead of text
+          tree.find('.branch>a').each(function () {
+            $(this).on('click', function (e) {
+              $(this).closest('li').click();
+              e.preventDefault();
+            });
+          });
+          
+          //fire event to open branch if the li contains a button instead of text
+          tree.find('.branch>button').each(function () {
+            $(this).on('click', function (e) {
+              $(this).closest('li').click();
+              e.preventDefault();
+            });
+          });
+        }
+      });
+
+      //Initialization of treeviews
+      $('#tree1').treed();
+  </script>
+</body>
+
+</html>

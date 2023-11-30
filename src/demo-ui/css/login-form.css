@@ -1,0 +1,100 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.border-md {
+  border-width: 1px;
+}
+
+.btn-facebook {
+  background: #405D9D;
+  border: none;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+  background: #314879;
+}
+
+.btn-twitter {
+  background: #42AEEC;
+  border: none;
+}
+
+.btn-twitter:hover, .btn-twitter:focus {
+  background: #1799e4;
+}
+
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+  min-height: 100vh;
+}
+
+.form-control:not(select) {
+  padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+  height: 52px;
+  padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+.navbar {
+  min-height: 80px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #4B49AC;
+  border-color: #4B49AC;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #3f3e91;
+  border-color: #3b3a88;
+}
+
+.btn-primary:focus {
+  color: #fff;
+  background-color: #3f3e91;
+  border-color: #3b3a88;
+  box-shadow: 0 0 0 0.2rem rgba(102, 100, 184, 0.5);
+}
+
+.btn-primary.disabled {
+  color: #fff;
+  background-color: #4B49AC;
+  border-color: #4B49AC;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #3b3a88;
+  border-color: #37367f;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(102, 100, 184, 0.5);
+}

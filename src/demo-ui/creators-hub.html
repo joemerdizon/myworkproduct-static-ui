@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Work Product</title>
+  <link rel="shortcut icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="vendors/feather/feather.css">  
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">   
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">  
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.css" integrity="sha512-7uSoC3grlnRktCWoO4LjHMjotq8gf9XDFQerPuaph+cqR7JC9XKGdvN+UwZMC14aAaBDItdRj3DcSDs4kMWUgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">    
+  <link rel="stylesheet" href="css/calendar-main.css">
+  <link rel="stylesheet" href="css/custom.css"> 
+  <link rel="stylesheet" href="css/standard.css">   
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">        
+
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>          
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="ti-settings mx-2"></i>
+            </a>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face0.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="profile-information.html" class="dropdown-item">
+                <i class="ti-user text-primary"></i>
+                Profile
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    
+    <div class="container-fluid page-body-wrapper">      
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <p class="settings-heading">SIDEBAR COLOR</p>
+        <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+        <p class="settings-heading mt-2">HEADER COLOR</p>
+        <div class="color-tiles mx-0 px-4">
+          <div class="tiles default"></div>
+          <div class="tiles dark"></div>                        
+          <div class="tiles"></div>     
+          <div class="tiles"></div>     
+          <div class="tiles success"></div>
+          <div class="tiles danger"></div>
+          <div class="tiles warning"></div>            
+          <div class="tiles info"></div>            
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">              
+              <i class="fa-solid fa-gauge menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
+              <i class="fa-solid fa-tasks menu-icon"></i>
+              <span class="menu-title">Task</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-task">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="create-workflow.html">Create Workflow</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-workflow.html">Assign Workflow</a></li>
+              </ul>
+            </div>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-reports" aria-expanded="false" aria-controls="nav-item-reports">
+              <i class="fa-solid fa-file-lines menu-icon"></i>
+              <span class="menu-title">Work Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-reports">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="view-work-product-template.html">View Work Product Template</a></li>
+                <li class="nav-item"> <a class="nav-link" href="generate-work-product.html">Generate Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-work-product.html">Assign Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">My Generated Work Product</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creators-hub.html">
+              <i class="fa-solid fa-desktop menu-icon"></i>
+              <span class="menu-title">Creators Hub</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">
+              <i class="fa-solid fa-ticket menu-icon"></i>
+              <span class="menu-title">Tickets</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-tickets">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="generate-ticket-report.html">Generate Ticket Report</a></li>
+                <li class="nav-item"> <a class="nav-link" href="submit-a-ticket.html">Submit a Ticket</a></li>
+              </ul>
+            </div>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-approval" aria-expanded="false" aria-controls="nav-item-approval">
+              <i class="fa-solid fa-thumbs-up menu-icon"></i>
+              <span class="menu-title">Approval</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-approval">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#">Request</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Submit</a></li>
+              </ul>
+            </div>
+          </li>                   
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">              
+              <i class="fa-solid fa-laptop-file menu-icon"></i>
+              <span class="menu-title">Files</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="comments-and-notes.html">              
+              <i class="fa-solid fa-comments menu-icon"></i>
+              <span class="menu-title">Comments and Notes</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="market-place.html">              
+              <i class="fa-solid fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">Market Place</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">              
+              <i class="fa-solid fa-phone-square menu-icon"></i>
+              <span class="menu-title">Contacts</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-settings" aria-expanded="false" aria-controls="nav-item-settings">
+              <i class="fa-solid fa-cogs menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-settings">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="import-task-categories-and-sub-categories.html">Import Data</a></li>
+              </ul>
+            </div>
+          </li>          
+        </ul>
+      </nav>
+      <!-- partial -->
+
+      <div class="main-panel">
+        <div class="content-wrapper">                    
+          <div class="row" style="width: 80.5%;">           
+
+            <div class="col-md-12 col-12 align-items-stretch">
+              <div class="row">                               
+                <div class="col-md-12 col-12 grid-margin stretch-card">
+                  <div class="card shadow-sm">
+                    <div class="card-body">
+                      <div class="row">                                                
+                        <div class="col-12">
+                          <h3 class="text-center font-weight-bold pb-4 text-muted">
+                            Report Header
+                            <span class="badge badge-pill badge-primary float-right">Preview</span>
+                          </h3>
+                          <div class="card mb-3 rounded-0">
+                            <div id="accordion-template-sections" class="myaccordion w-100">
+                              <div class="card">
+                                <div class="card-header p-0" id="headingOneTemplateSections">
+                                  <h2 class="mb-0">                                      
+                                    <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOneTemplateSections" aria-expanded="false" aria-controls="collapseOneTemplateSections" disabled>
+                                      <div class="text-left">
+                                        <h4 class="text-muted font-weight-bold m-0 mb-1">Section Header 1</h4>                         
+                                        <small class="text-muted d-block">Sample Header Section Sub 1</small>
+                                      </div>
+                                      <div class="float-right">
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-circle-minus"></i>
+                                        </a>
+                                        <i class="mx-1 myaccordion-fa fa" aria-hidden="true"></i>
+                                      </div>                                                                            
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseOneTemplateSections" class="collapse show" aria-labelledby="headingOneTemplateSections" data-parent="#accordion-template-sections">
+                                  <div class="card-body px-3" style="pointer-events:none;">
+                                    <div class="text-muted col-12 my-4">
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <h5 class="font-weight-bold m-0 creators-hub-items-level1">Category</h5>
+                                      </div>
+                                      <div class="col-12 border-bottom py-2 px-0">
+                                        <div class="float-right">                                  
+                                          <a href="#" class="text-muted mx-1 text-decoration-none">
+                                            <i class="fa-solid fa-eye"></i>
+                                          </a>                                          
+                                        </div>
+                                        <p class="font-weight-bold m-0 creators-hub-items-level1">Sub Category</p>
+                                      </div>                        
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level2">Action Item 1</p>
+                                      </div>
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level2">Action Item 2</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level3">Action Sub Item 1</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level4">Action Sub Sub Item 1</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level4">Action Sub Sub Item 2</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level5">Action Sub Sub Sub Item 1</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level4">Action Sub Sub Item 3</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level3">Action Sub Item 2</p>
+                                      </div>  
+                                      <div class="col-12 border-bottom py-2 px-0">                                        
+                                        <p class="m-0 creators-hub-items-level2">Action Item 3</p>
+                                      </div>  
+                                    </div>                                    
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="card">
+                                <div class="card-header p-0" id="headingTwoTemplateSections">
+                                  <h2 class="mb-0">                                      
+                                    <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoTemplateSections" aria-expanded="false" aria-controls="collapseTwoTemplateSections" disabled>
+                                      <div class="text-left">
+                                        <h4 class="text-muted font-weight-bold m-0 mb-1">Section Header 2</h4>                         
+                                        <small class="text-muted d-block">Sample Header Section Sub 2</small>
+                                      </div>
+                                      <div class="float-right">
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                        <a href="#" class="mx-1 text-decoration-none text-secondary">
+                                          <i class="fa-solid fa-circle-minus"></i>
+                                        </a>
+                                        <i class="mx-1 myaccordion-fa fa" aria-hidden="true"></i>
+                                      </div>                                                                            
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseTwoTemplateSections" class="collapse" aria-labelledby="headingTwoTemplateSections" data-parent="#accordion-template-sections">
+                                  <div class="card-body px-3">                                    
+                                  </div>
+                                </div>
+                              </div> 
+                            </div>                            
+                          </div>
+                          <p class="text-muted text-right pt-2">
+                            Report Footer
+                          </p>
+                        </div>
+                      </div>                                    
+                    </div>
+                  </div>              
+                </div>
+
+                <!-- partial:partials/_settings-panel.html -->
+                <div class="theme-setting-wrapper">
+                  <div id="settings-trigger">
+                    <i class="fa-solid fa-chevron-left"></i>          
+                  </div>
+                  <div id="theme-settings" class="settings-panel">
+                    <i class="settings-close ti-close d-block"></i>
+                    <p class="settings-heading">PALLET CONTAINER</p>
+
+                    <div id="accordion" class="myaccordion w-100">
+                      <div class="card">
+                        <div class="card-header p-0" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <p class="mb-0">Create Report</p>
+                              <i class="myaccordion-fa fa" aria-hidden="true"></i>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show border-bottom" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body px-0">
+                            <div class="col-12 my-4">
+                              <form>
+                                <div class="form-group mb-2 row">                                  
+                                  <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="name_of_report" placeholder="Name of Report">
+                                  </div>
+                                </div>
+                                <!-- <div class="form-group mb-2 row">                                  
+                                  <div class="col-sm-12">
+                                    <select id="status" class="form-control" required>
+                                      <option disabled selected>Select Status</option>
+                                      <option value="Active">Active</option>
+                                      <option value="Inactive">Inactive</option>													
+                                    </select>
+                                  </div>
+                                </div>                  -->
+                                <div class="form-group mb-2 row">                                  
+                                  <div class="col-sm-12">
+                                    <select id="status" class="form-control" required>
+                                      <option disabled selected>Select Category</option>
+                                      <option value="Category 1">Category 1</option>
+                                      <option value="Category 2">Category 2</option>													
+                                    </select>
+                                  </div>
+                                </div>     
+                                <div class="form-group mb-2 row">                                  
+                                  <div class="col-sm-12">
+                                    <select id="status" class="form-control" required>
+                                      <option disabled selected>Select Sub Category</option>
+                                      <option value="SubCategory 1">Sub Category 1</option>
+                                      <option value="SubCategory 2">Sub Category 2</option>													
+                                    </select>
+                                  </div>
+                                </div>                 
+                                <div class="form-group mb-2 row">                                  
+                                  <div class="col-sm-12">
+                                    <input type="text" data-role="tagsinput" id="tags" class="form-control" placeholder="Tags">
+                                    <small class="form-text text-muted">Use comma "," to separate tags from each other.</small>                   
+                                  </div>
+                                </div>
+                                <div class="form-group mb-0 row">
+                                  <label for="tags" class="col-sm-6 col-form-label text-right">Allow Assignment</label>
+                                  <div class="col-sm-6 pt-2">
+                                    <div class="custom-toggle">
+                                      <label class="switch switch-left-right">
+                                        <input class="switch-input" type="checkbox">
+                                        <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                        <span class="switch-handle"></span>
+                                      </label>
+                                    </div>                     
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="card">
+                        <div class="card-header p-0" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <p class="mb-0">Template Options </p>
+                              <i class="myaccordion-fa fa" aria-hidden="true"></i>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body px-3">
+                            <div class="col-12 my-4">            
+                              <button type="button" class="btn btn-primary btn-sm btn-block text-left">
+                                <i class="fa fa-upload mr-3"></i> Publish
+                              </button>
+                              <button type="button" class="btn btn-primary btn-sm btn-block text-left" data-toggle="modal" data-target="#modal-fullscreen-xl-generate-report">
+                                <i class="fa fa-vial mr-3"></i> Simulate
+                              </button>
+                              <button type="button" class="btn btn-primary btn-sm btn-block text-left">
+                                <i class="fa fa-paper-plane mr-3"></i> Send for Approval
+                              </button>                                                            
+                              <button type="button" class="btn btn-danger btn-sm btn-block text-left">
+                                <i class="fa fa-window-close mr-3"></i> Cancel
+                              </button>
+                              <button type="button" class="btn btn-success btn-sm btn-block text-left">
+                                <i class="fa fa-save mr-3"></i> Save
+                              </button>                                                      
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header p-0" id="headingThree">
+                          <h2 class="mb-0">
+                            <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <p class="mb-0">General</p>
+                              <i class="myaccordion-fa fa" aria-hidden="true"></i>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body px-3">
+                            <div class="col-12 my-4">
+                              <button type="button" class="btn btn-primary btn-sm btn-block text-left">
+                                <i class="mdi mdi-format-vertical-align-top mr-3"></i>
+                                Add Header
+                              </button>
+                              <button type="button" class="btn btn-primary btn-sm btn-block text-left" data-toggle="modal" data-target="#modal-add-reference">
+                                <i class="mdi mdi mdi-format-list-bulleted-square mr-3"></i>
+                                Add Reference
+                              </button>
+                              <button type="button" class="btn btn-primary btn-sm btn-block text-left" data-toggle="modal" data-target="#modal-add-section">
+                                <i class="mdi mdi mdi-format-indent-increase mr-3"></i>
+                                Add Section
+                              </button>
+                              <button type="button" class="btn btn-primary btn-sm btn-block text-left">
+                                <i class="mdi mdi-format-vertical-align-bottom mr-3"></i>
+                                Add Footer
+                              </button>                       
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="card">
+                        <div class="card-header p-0" id="headingFour">
+                          <h2 class="mb-0">
+                            <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <p class="mb-0">Organization</p>
+                              <i class="myaccordion-fa fa" aria-hidden="true"></i>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                          <div class="card-body px-3">
+                            <div class="col-12 mt-4">            
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input">
+                                  Promotion
+                                <i class="input-helper"></i></label>
+                              </div>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input">
+                                  Demotion
+                                <i class="input-helper"></i></label>
+                              </div>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input">
+                                  Maintained
+                                <i class="input-helper"></i></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+
+        <div class="modal fade" id="modal-add-section" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">              
+              <div class="modal-header p-3 pr-4">
+                <h5 class="modal-title"><i class="mdi  mdi mdi-format-indent-increase"></i> Add Section</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body p-4 overflow-auto" style="height: 500px; scrollbar-width: thin; background: #f5f7ff">
+                <div class="row h-100">
+                  <div class="col-8">
+                    <div class="card h-100 mb-3">
+                      <div class="card-body">
+                        <div class="row">                                                
+                          <div class="col-12">
+                            <div class="card mb-3">
+                              <div class="card-header bg-light shadow-sm rounded-top">
+                                <div class="position-relative">
+                                  <input type="text" class="creators-hub-input-text bg-light h4 font-weight-bold" id="name" placeholder="&#xf304 Section Header">
+                                  <span class="creators-hub-input-text-border"></span>
+                                </div>
+                                <div class="position-relative">
+                                  <input type="text" class="creators-hub-input-text bg-light text-muted" id="description" placeholder="&#xf304 Section Header Description">
+                                  <span class="creators-hub-input-text-border"></span>
+                                </div>                                
+                              </div>
+                              <div class="card-body">
+                                <div class="card-body px-3">
+                                  <div class="text-muted col-12 my-4">
+                                    <div class="col-12 border-bottom py-2 px-0">                                      
+                                      <input type="text" class="creators-hub-input-text h5 font-weight-bold" id="name" placeholder="&#xf304 Category">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>
+                                    </div>
+                                    <div class="col-12 border-bottom py-2 px-0">
+                                      <input type="text" class="creators-hub-input-text font-weight-bold" id="name" placeholder="&#xf304 Sub Category">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>                                                                            
+                                    </div>                        
+                                    <div class="col-12 border-bottom py-2 px-0">                                                                            
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level2" id="name" placeholder="&#xf304 Action Item 1">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>                                                                            
+                                    </div>
+                                    <div class="col-12 border-bottom py-2 px-0">
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level2" id="name" placeholder="&#xf304 Action Item 2">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>
+                                    </div>  
+                                    <div class="col-12 border-bottom py-2 px-0">
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level3" id="name" placeholder="&#xf304 Action Sub Item 1">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>
+                                    </div>
+                                    <div class="col-12 border-bottom py-2 px-0">                                                                            
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level4" id="name" placeholder="&#xf304 Action Sub Sub Item 1">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>                                                                            
+                                    </div>
+                                    <div class="col-12 border-bottom py-2 px-0">
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level4" id="name" placeholder="&#xf304 Action Sub Sub Item 2">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>
+                                    </div>  
+                                    <div class="col-12 border-bottom py-2 px-0">
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level5" id="name" placeholder="&#xf304 Action Sub Sub Sub Item 1">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>
+                                    </div>
+                                    <div class="col-12 border-bottom py-2 px-0">                                                                            
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level4" id="name" placeholder="&#xf304 Action Sub Sub Item 3">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>                                                                            
+                                    </div>
+                                    <div class="col-12 border-bottom py-2 px-0">
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level3" id="name" placeholder="&#xf304 Action Sub Item 2">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>
+                                    </div>  
+                                    <div class="col-12 border-bottom py-2 px-0">
+                                      <input type="text" class="creators-hub-input-text creators-hub-items-level2" id="name" placeholder="&#xf304 Action Item 3">
+                                      <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                      </a>
+                                    </div>  
+                                  </div>                                    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                    
+                  </div>
+                  <div class="col-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row mb-4">
+                          <div class="col-md-12 col-12">
+                            <p class="card-title">   
+                              <i class="fa-solid fa-list-check"></i>                  
+                              Template Tasks
+                            </p>
+                            <div class="my-3">
+                              <hr>
+                            </div>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                              <div class="input-group-append">
+                                <button class="btn btn-sm btn-primary" type="button">
+                                  <i class="icon-search"></i>                                    
+                                  Search
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-md-12 col-12 mb-3">
+                            <div id="accordion-reference-legends" class="myaccordion w-100 rounded">
+                              <div class="card">
+                                <div class="card-header p-0 bg-primary border-0" id="headingOne">
+                                  <h2 class="mb-0">
+                                    <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseReference" aria-expanded="false" aria-controls="collapseReference">
+                                      <p class="mb-0 text-white">Reference Legends</p>
+                                      <i class="myaccordion-fa fa" aria-hidden="true"></i>
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseReference" class="collapse bg-light" aria-labelledby="headingOne" data-parent="#accordion-reference-legends">
+                                  <div class="card-body px-0">
+                                    <div class="mt-2 pb-4">
+                                      <span class="d-block">
+                                        <i class="fa-fw fa-solid fa-folder-plus mr-2 text-primary"></i>Category
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-folder-tree mr-2 text-dark"></i>Sub Category
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-person-running mr-2 text-warning"></i>Action Item
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-file-circle-check mr-2 text-success"></i>Approved Task Template
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-file-circle-xmark mr-2 text-danger"></i>Not Approved Task Template
+                                      </span>
+                                      <!-- <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-list-check mr-2 text-info"></i> Checklist                                        
+                                      </span> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-md-12 col-12">
+                            <div class="my-3">
+                              <hr>
+                            </div>
+                            <p class="font-weight-bold">Reference</p>
+                            <div class="col-12 p-0">
+                              <ul id="tree1">      
+                                <li><input type="checkbox" class="item1" id="item1" data-content=""> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#"> </a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item1" id="item1sub1" data-content="Sub Item 1"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Sub Item 1</li>
+                                    <li><input type="checkbox" class="item1" id="item1sub2" data-content="Sub Item 2"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i></i>Sub Item 2
+                                      <ul>
+                                        <li><input type="checkbox" class="item1" id="item1subsub1" data-content="Sub Sub Item 1"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>Sub Sub Item 1
+                                          <ul>
+                                              <li><input type="checkbox" class="item1" id="item1subsubsub1" data-content="Sub Sub Sub 1"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Sub Sub Sub 1</li>
+                                              <li><input type="checkbox" class="item1" id="item1subsubsub2" data-content="Sub Sub Sub 2"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Sub Sub Sub 2</li>
+                                              <li><input type="checkbox" class="item1" id="item1subsubsub3" data-content="Sub Sub Sub 3"> <i class="fa-solid fa-file-circle-xmark mx-1 text-danger"></i>Sub Sub Sub 3</li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li><input type="checkbox" class="item1" id="item1sub3" data-content="Sub Item 3"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Sub Item 3</li>
+                                  </ul>
+                                </li>                                      
+                                <li><input type="checkbox" class="item2" id="item2" data-content="<h5 class='m-0 py-2 border-bottom'><b>Business Practice Management</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Business Practice Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item2" id="item2sub1" data-content="<p class='m-0 py-2 border-bottom'><b>Warranties</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Warranties  
+                                      <ul>
+                                        <li><input type="checkbox" class="item2" id="item2subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Warranty Checklist <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>Warranty Checklist
+                                          <ul>
+                                              <li><input type="checkbox" class="item2" id="item2subsubsub1" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Clinic 1 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Clinic 1</li>
+                                              <li><input type="checkbox" class="item2" id="item2subsubsub2" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Clinic 2 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-xmark mx-1 text-danger"></i>Clinic 2</li>
+                                              <li><input type="checkbox" class="item2" id="item2subsubsub3" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Workstation 1 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Workstation 1</li>
+                                          </ul>
+                                        </li>                              
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item3" id="item3" data-content="<h5 class='m-0 py-2 border-bottom'><b>Change Management</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Change Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item3" id="item3sub1" data-content="<p class='m-0 py-2 border-bottom'><b>New System Implementation</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>New System Implementation  
+                                      <ul>
+                                        <li><input type="checkbox" class="item3" id="item3subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>CyberKnife Implementation Checklist<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>CyberKnife Implementation Checklist</li>                              
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item4" id="item4" data-content="<h5 class='m-0 py-2 border-bottom'><b>Competency</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Competency</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item4" id="item4sub1" data-content="<p class='m-0 py-2 border-bottom'><b>Doctors Workstation Acquisition</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Doctor's Workstation Acquisition  
+                                      <ul>
+                                        <li><input type="checkbox" class="item4" id="item4subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Knows to check daily QC on Radiologist Workstation<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Knows to check daily QC on Radiologist Workstation</li>
+                                        <li><input type="checkbox" class="item4" id="item4subsub2" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Can bring patient up on Monitor<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Can bring patient up on Monitor</li>
+                                      </ul>                            
+                                    </li>
+                                    <li><input type="checkbox" class="item4" id="item4sub2" data-content="<p class='m-0 py-2 border-bottom'><b>Operation of GE Workstation</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Operation of GE Workstation</li>
+                                    <li><input type="checkbox" class="item4" id="item4sub3" data-content="<p class='m-0 py-2 border-bottom'><b>Receptionist Workflows and Procedures</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Receptionist Workflows and Procedures</li>
+                                    <li><input type="checkbox" class="item4" id="item4sub4" data-content="<p class='m-0 py-2 border-bottom'><b>Technologist Workflows and Procedures</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Technologist Workflows and Procedures</li>
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item5" id="item5"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Credentialing</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item5" id="item5sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item6" id="item6"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Credentialing Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item6" id="item6sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item7" id="item7"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Cultural Contribution</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item7" id="item7sub1">  </li>                          
+                                  </ul> 
+                                </li>
+                                <li><input type="checkbox" class="item8" id="item8"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Knowledge Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item8" id="item8sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item9" id="item9"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Operations Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item9" id="item9sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item10" id="item10"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Personnel Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item10" id="item10sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item11" id="item11"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Practice Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item11" id="item11sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item12" id="item12"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Process Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item12" id="item12sub1">  </li>                          
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                
+              </div>
+              <div class="modal-footer py-2">                
+                <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk pr-2"></i> Save</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-ban pr-2"></i> Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-add-reference" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">              
+              <div class="modal-header p-3 pr-4">
+                <h5 class="modal-title"><i class="mdi  mdi mdi-format-indent-increase"></i> Add Reference</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body p-4 overflow-auto" style="height: 500px; scrollbar-width: thin; background: #f5f7ff">
+                <div class="row h-100">
+                  <div class="col-8">
+                    <div class="card h-100 mb-3">
+                      <div class="card-body">
+                        <div class="row">                                                
+                          <div class="col-12">
+                            <div class="card mb-3">
+                              <div class="card-body">                                
+                                <div class="col-12 border-bottom py-2 px-0">                                      
+                                  <input type="text" class="creators-hub-input-text h5 font-weight-bold" id="name" placeholder="&#xf304 Category">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>
+                                </div>
+                                <div class="col-12 border-bottom py-2 px-0">
+                                  <input type="text" class="creators-hub-input-text font-weight-bold" id="name" placeholder="&#xf304 Sub Category">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>                                                                            
+                                </div>                        
+                                <div class="col-12 border-bottom py-2 px-0">                                                                            
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level2" id="name" placeholder="&#xf304 Action Item 1">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>                                                                            
+                                </div>
+                                <div class="col-12 border-bottom py-2 px-0">
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level2" id="name" placeholder="&#xf304 Action Item 2">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>
+                                </div>  
+                                <div class="col-12 border-bottom py-2 px-0">
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level3" id="name" placeholder="&#xf304 Action Sub Item 1">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>
+                                </div>
+                                <div class="col-12 border-bottom py-2 px-0">                                                                            
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level4" id="name" placeholder="&#xf304 Action Sub Sub Item 1">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>                                                                            
+                                </div>
+                                <div class="col-12 border-bottom py-2 px-0">
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level4" id="name" placeholder="&#xf304 Action Sub Sub Item 2">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>
+                                </div>  
+                                <div class="col-12 border-bottom py-2 px-0">
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level5" id="name" placeholder="&#xf304 Action Sub Sub Sub Item 1">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>
+                                </div>
+                                <div class="col-12 border-bottom py-2 px-0">                                                                            
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level4" id="name" placeholder="&#xf304 Action Sub Sub Item 3">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>                                                                            
+                                </div>
+                                <div class="col-12 border-bottom py-2 px-0">
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level3" id="name" placeholder="&#xf304 Action Sub Item 2">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>
+                                </div>  
+                                <div class="col-12 border-bottom py-2 px-0">
+                                  <input type="text" class="creators-hub-input-text creators-hub-items-level2" id="name" placeholder="&#xf304 Action Item 3">
+                                  <a href="#" class="text-muted mx-1 text-decoration-none float-right">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                    
+                  </div>
+                  <div class="col-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row mb-4">
+                          <div class="col-md-12 col-12">
+                            <p class="card-title">   
+                              <i class="fa-solid fa-list-check"></i>                  
+                              Template Tasks
+                            </p>
+                            <div class="my-3">
+                              <hr>
+                            </div>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                              <div class="input-group-append">
+                                <button class="btn btn-sm btn-primary" type="button">
+                                  <i class="icon-search"></i>                                    
+                                  Search
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-md-12 col-12 mb-3">
+                            <div id="accordion-reference-legends" class="myaccordion w-100 rounded">
+                              <div class="card">
+                                <div class="card-header p-0 bg-primary border-0" id="headingOne">
+                                  <h2 class="mb-0">
+                                    <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseReference" aria-expanded="false" aria-controls="collapseReference">
+                                      <p class="mb-0 text-white">Reference Legends</p>
+                                      <i class="myaccordion-fa fa" aria-hidden="true"></i>
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseReference" class="collapse bg-light" aria-labelledby="headingOne" data-parent="#accordion-reference-legends">
+                                  <div class="card-body px-0">
+                                    <div class="mt-2 pb-4">
+                                      <span class="d-block">
+                                        <i class="fa-fw fa-solid fa-folder-plus mr-2 text-primary"></i>Category
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-folder-tree mr-2 text-dark"></i>Sub Category
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-person-running mr-2 text-warning"></i>Action Item
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-file-circle-check mr-2 text-success"></i>Approved Task Template
+                                      </span>
+                                      <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-file-circle-xmark mr-2 text-danger"></i>Not Approved Task Template
+                                      </span>
+                                      <!-- <span class="d-block text">
+                                        <i class="fa-fw fa-solid fa-list-check mr-2 text-info"></i> Checklist                                        
+                                      </span> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-md-12 col-12">
+                            <div class="my-3">
+                              <hr>
+                            </div>
+                            <p class="font-weight-bold">Reference</p>
+                            <div class="col-12 p-0">
+                              <ul id="tree2">      
+                                <li><input type="checkbox" class="item1" id="item1" data-content=""> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#"> </a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item1" id="item1sub1" data-content="Sub Item 1"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Sub Item 1</li>
+                                    <li><input type="checkbox" class="item1" id="item1sub2" data-content="Sub Item 2"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i></i>Sub Item 2
+                                      <ul>
+                                        <li><input type="checkbox" class="item1" id="item1subsub1" data-content="Sub Sub Item 1"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>Sub Sub Item 1
+                                          <ul>
+                                              <li><input type="checkbox" class="item1" id="item1subsubsub1" data-content="Sub Sub Sub 1"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Sub Sub Sub 1</li>
+                                              <li><input type="checkbox" class="item1" id="item1subsubsub2" data-content="Sub Sub Sub 2"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Sub Sub Sub 2</li>
+                                              <li><input type="checkbox" class="item1" id="item1subsubsub3" data-content="Sub Sub Sub 3"> <i class="fa-solid fa-file-circle-xmark mx-1 text-danger"></i>Sub Sub Sub 3</li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li><input type="checkbox" class="item1" id="item1sub3" data-content="Sub Item 3"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Sub Item 3</li>
+                                  </ul>
+                                </li>                                      
+                                <li><input type="checkbox" class="item2" id="item2" data-content="<h5 class='m-0 py-2 border-bottom'><b>Business Practice Management</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Business Practice Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item2" id="item2sub1" data-content="<p class='m-0 py-2 border-bottom'><b>Warranties</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Warranties  
+                                      <ul>
+                                        <li><input type="checkbox" class="item2" id="item2subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Warranty Checklist <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>Warranty Checklist
+                                          <ul>
+                                              <li><input type="checkbox" class="item2" id="item2subsubsub1" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Clinic 1 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Clinic 1</li>
+                                              <li><input type="checkbox" class="item2" id="item2subsubsub2" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Clinic 2 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-xmark mx-1 text-danger"></i>Clinic 2</li>
+                                              <li><input type="checkbox" class="item2" id="item2subsubsub3" data-content="<p class='m-0 pl-5 py-2 border-bottom'>Workstation 1 <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Workstation 1</li>
+                                          </ul>
+                                        </li>                              
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item3" id="item3" data-content="<h5 class='m-0 py-2 border-bottom'><b>Change Management</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Change Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item3" id="item3sub1" data-content="<p class='m-0 py-2 border-bottom'><b>New System Implementation</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>New System Implementation  
+                                      <ul>
+                                        <li><input type="checkbox" class="item3" id="item3subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>CyberKnife Implementation Checklist<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-person-running  mx-1 text-warning"></i>CyberKnife Implementation Checklist</li>                              
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item4" id="item4" data-content="<h5 class='m-0 py-2 border-bottom'><b>Competency</b></h5> <span class='panel_toolbox-v2' style='right: 3px;'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span>"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Competency</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item4" id="item4sub1" data-content="<p class='m-0 py-2 border-bottom'><b>Doctors Workstation Acquisition</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-folder-tree mx-1 text-dark"></i>Doctor's Workstation Acquisition  
+                                      <ul>
+                                        <li><input type="checkbox" class="item4" id="item4subsub1" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Knows to check daily QC on Radiologist Workstation<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Knows to check daily QC on Radiologist Workstation</li>
+                                        <li><input type="checkbox" class="item4" id="item4subsub2" data-content="<p class='m-0 pl-4 py-2 border-bottom'>Can bring patient up on Monitor<span class='float-right'><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Can bring patient up on Monitor</li>
+                                      </ul>                            
+                                    </li>
+                                    <li><input type="checkbox" class="item4" id="item4sub2" data-content="<p class='m-0 py-2 border-bottom'><b>Operation of GE Workstation</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Operation of GE Workstation</li>
+                                    <li><input type="checkbox" class="item4" id="item4sub3" data-content="<p class='m-0 py-2 border-bottom'><b>Receptionist Workflows and Procedures</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Receptionist Workflows and Procedures</li>
+                                    <li><input type="checkbox" class="item4" id="item4sub4" data-content="<p class='m-0 py-2 border-bottom'><b>Technologist Workflows and Procedures</b> <span class='float-right'><a href='#' class='mx-1'><i class='fa fa-eye'></i></a><a href='#' class='mx-1'><i class='fa fa-edit'></i></a><a href='#' class='mx-1'><i class='fa fa-close'></i></a></span></p>"> <i class="fa-solid fa-file-circle-check mx-1 text-success"></i>Technologist Workflows and Procedures</li>
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item5" id="item5"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Credentialing</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item5" id="item5sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item6" id="item6"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Credentialing Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item6" id="item6sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item7" id="item7"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Cultural Contribution</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item7" id="item7sub1">  </li>                          
+                                  </ul> 
+                                </li>
+                                <li><input type="checkbox" class="item8" id="item8"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Knowledge Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item8" id="item8sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item9" id="item9"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Operations Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item9" id="item9sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item10" id="item10"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Personnel Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item10" id="item10sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item11" id="item11"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Practice Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item11" id="item11sub1">  </li>                          
+                                  </ul>
+                                </li>
+                                <li><input type="checkbox" class="item12" id="item12"> <i class="fa-solid fa-folder-plus mx-1 text-primary"></i><a href="#">Process Management</a>
+                                  <ul>
+                                    <li><input type="checkbox" class="item12" id="item12sub1">  </li>                          
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                
+              </div>
+              <div class="modal-footer py-2">                
+                <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk pr-2"></i> Save</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-ban pr-2"></i> Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022 - My Work Product. All rights reserved.</span>            
+          </div>          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+      <!-- Modal Fullscreen xl -->
+      <div class="modal fade modal-fullscreen" id="modal-fullscreen-xl-generate-report" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card bg-light border mb-3">                    
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12 col-sm-4 py-3 px-4 border-right">
+                          <div class="row">
+                            <div class="col-12">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Approver:</b>  
+                                <input list="simulateApprovers" name="simulateApprover" id="simulateApprover" class="creators-hub-simulate-modal-input-text w-100" placeholder="&#xf304 ">
+                                <datalist id="simulateApprovers">
+                                  <option value="John Smith">
+                                  <option value="Ryan Reynolds">
+                                  <option value="Gal Gadoth">
+                                  <option value="Crystal Liu">
+                                  <option value="Tobey Maguire">
+                                </datalist> 
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row mt-4">
+                            <div class="col-12">
+                              <p class="m-0 mb-3">
+                                <b class="text-primary mr-2">Assign To:</b>  
+                                <input list="simulateApprovers" name="simulateAssigntTo" id="simulateAssigntTo" class="creators-hub-simulate-modal-input-text w-100" placeholder="&#xf304 ">
+                                <datalist id="simulateAssigntTos">
+                                  <option value="John Smith">
+                                  <option value="Ryan Reynolds">
+                                  <option value="Gal Gadoth">
+                                  <option value="Crystal Liu">
+                                  <option value="Tobey Maguire">
+                                </datalist> 
+                              </p>
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Monitors:</b>
+                                <!-- <textarea class="creators-hub-simulate-modal-input-text w-100" id="simulateViewers" placeholder="&#xf304 " rows="4"></textarea> -->
+                                <div id="creators-hub-simulate-viewer" class="pt-2">
+                                  <input type="text" data-role="tagsinput" id="simulateViewers" class="creators-hub-simulate-modal-input-text w-100" placeholder="&#xf304 ">
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-12 col-sm-4 py-3 px-4 border-right">
+                          <div class="row">
+                            <div class="col-12">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Report Range:</b>
+                                <span class="d-block mt-1">
+                                  <input type="date" class="creators-hub-simulate-modal-input-text" id="simulateDateFrom" style="width: 49%;">
+                                  <input type="date" class="creators-hub-simulate-modal-input-text" id="simulateDateTo" style="width: 49%;">
+                                </span>                            
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row mt-4">
+                            <div class="col-6">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">ID No:</b>
+                                <span class="d-block mt-1">1001</span>
+                              </p>
+                            </div>
+                            <div class="col-6">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Date:</b>
+                                <span class="d-block mt-1">Mar 04, 2022</span>                            
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row mt-4">
+                            <div class="col-12">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Report:</b>
+                                <span class="d-block mt-1">Test template report</span>
+                              </p>                          
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-sm-4 py-3 px-4">
+                          <div class="card text-white bg-danger mb-3 w-100 h-100">
+                            <div class="card-body d-flex justify-content-center">
+                              <h2 class="text-white text-center align-self-center">Simulation Mode Only</h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-1 text-right">
+                  <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa-solid fa-chart-bar fa-stack-1x text-white"></i>
+                  </span>                  
+                </div> -->
+              </div>
+              <div class="row mb-5">
+                <div class="col-12">
+                  <small>Report Progress:</small>
+                  <div class="progress" style="height: 20px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                  </div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">                  
+                  <div class="table-responsive">       
+                    <span class="badge badge-primary">
+                      <i class="fa-solid fa-list-check mr-2"></i> Task 1
+                    </span>             
+                    <table class="table table-striped">                      
+                      <thead>
+                        <tr>
+                          <th>Task Name</th>
+                          <th>Assigned</th>
+                          <th>Recurrence</th>
+                          <th>Approver</th>
+                          <th>Due Date</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="font-weight-bold">
+                          <td>Test template task 1</td>  
+                          <td>Yes</td>
+                          <td>
+                            <div class="col-12">
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence">
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div> 
+                          </td>
+                          <td>
+                            <img src="images/faces/face1.jpg" alt="image" class="mr-3">
+                            <input type="text" class="creators-hub-simulate-modal-input-text w-75 font-weight-bold" id="simulateTaskName1" placeholder="&#xf304 ">
+                          </td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100 font-weight-bold"></td>
+                          <td class="my-auto">
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#ba3742" /> 
+                            </svg>
+                            Pending
+                          </td>
+                          <td>
+                            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Open Description and/or Other Documents" onclick="launchReportActionModal()">
+                              <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 1</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td class="my-auto">
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#ba3742" /> 
+                            </svg>
+                            Pending
+                          </td>
+                          <td>
+                            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Open Description and/or Other Documents" onclick="launchReportActionModal()">
+                              <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                            </a>
+                          </td>
+                        </tr>
+                        <tr class="font-weight-bold">
+                          <td>Test template task 1</td>  
+                          <td>Yes</td>
+                          <td>
+                            <div class="col-12">
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence">
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div> 
+                          </td>
+                          <td>
+                            <img src="images/faces/face1.jpg" alt="image" class="mr-3">
+                            <input type="text" class="creators-hub-simulate-modal-input-text w-75 font-weight-bold" id="simulateTaskName2" placeholder="&#xf304 ">
+                          </td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100 font-weight-bold"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#fc8a34" /> 
+                            </svg>
+                            Active
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 1</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#fc8a34" /> 
+                            </svg>
+                            Active
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr class="font-weight-bold">
+                          <td>Test template task 1</td>  
+                          <td>Yes</td>
+                          <td>
+                            <div class="col-12">
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence">
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div> 
+                          </td>
+                          <td>
+                            <img src="images/faces/face1.jpg" alt="image" class="mr-3">
+                            <input type="text" class="creators-hub-simulate-modal-input-text w-75 font-weight-bold" id="simulateTaskName3" placeholder="&#xf304 ">
+                          </td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100 font-weight-bold"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#529f50" /> 
+                            </svg>
+                            Completed
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 1</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#529f50" /> 
+                            </svg>
+                            Completed
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="col-12">                  
+                  <div class="table-responsive">       
+                    <span class="badge badge-primary">
+                      <i class="fa-solid fa-list-check mr-2"></i> Task 2
+                    </span>             
+                    <table class="table table-striped">                      
+                      <thead>
+                        <tr>
+                          <th>Task Name</th>
+                          <th>Assigned</th>
+                          <th>Recurrence</th>
+                          <th>Approver</th>
+                          <th>Due Date</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="font-weight-bold">
+                          <td>Test template task 2</td>  
+                          <td>Yes</td>
+                          <td>
+                            <div class="col-12">
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence">
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div> 
+                          </td>
+                          <td>
+                            <img src="images/faces/face1.jpg" alt="image" class="mr-3">
+                            <input type="text" class="creators-hub-simulate-modal-input-text w-75 font-weight-bold" id="simulateTaskName4" placeholder="&#xf304 ">
+                          </td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100 font-weight-bold"></td>
+                          <td class="my-auto">
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#ba3742" /> 
+                            </svg>
+                            Pending
+                          </td>
+                          <td>
+                            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Open Description and/or Other Documents" onclick="launchReportActionModal()">
+                              <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 2</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td class="my-auto">
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#ba3742" /> 
+                            </svg>
+                            Pending
+                          </td>
+                          <td>
+                            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Open Description and/or Other Documents" onclick="launchReportActionModal()">
+                              <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 3</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100" id="simulateDateFrom"></td>
+                          <td class="my-auto">
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#ba3742" /> 
+                            </svg>
+                            Pending
+                          </td>
+                          <td>
+                            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Open Description and/or Other Documents" onclick="launchReportActionModal()">
+                              <i class="fa-solid fa-arrow-up-right-from-square"></i> 
+                            </a>
+                          </td>
+                        </tr>
+                        <tr class="font-weight-bold">
+                          <td>Test template task 2</td>  
+                          <td>Yes</td>
+                          <td>
+                            <div class="col-12">
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence">
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div> 
+                          </td>
+                          <td>
+                            <img src="images/faces/face1.jpg" alt="image" class="mr-3">
+                            <input type="text" class="creators-hub-simulate-modal-input-text w-75 font-weight-bold" id="simulateTaskName5" placeholder="&#xf304 ">
+                          </td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100 font-weight-bold"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#fc8a34" /> 
+                            </svg>
+                            Active
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 2</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#fc8a34" /> 
+                            </svg>
+                            Active
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 3</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#fc8a34" /> 
+                            </svg>
+                            Active
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr class="font-weight-bold">
+                          <td>Test template task 2</td>  
+                          <td>Yes</td>
+                          <td>
+                            <div class="col-12">
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence">
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div> 
+                          </td>
+                          <td>
+                            <img src="images/faces/face1.jpg" alt="image" class="mr-3">
+                            <input type="text" class="creators-hub-simulate-modal-input-text w-75 font-weight-bold" id="simulateTaskName6" placeholder="&#xf304 ">
+                          </td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100 font-weight-bold"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#529f50" /> 
+                            </svg>
+                            Completed
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 2</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#529f50" /> 
+                            </svg>
+                            Completed
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-5">Test action item 3</td>  
+                          <td>Yes</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td><input type="date" class="creators-hub-simulate-modal-input-text w-100"></td>
+                          <td>
+                            <svg height="13" width="10">
+                              <circle cx="5" cy="5" r="5" fill="#529f50" /> 
+                            </svg>
+                            Completed
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer py-2">
+              <!-- <div class="flex-fill text-center">
+                <span class="badge badge-pill badge-danger font-weight-bold w-25">Simulation Mode Only</span>
+              </div> -->
+              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-rectangle-xmark pr-2"></i> Close</button>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk pr-2"></i> Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Fullscreen xl (Layer 2) -->
+      <div class="modal fade modal-fullscreen" id="modal-fullscreen-xl-generate-report-action" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="m-0">Job Description and/or other Document(s)</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="background: #f5f7ff;">
+              <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-title m-0 mb-2">Assignment Information</p>
+                      <div class="card bg-light border mb-5">                    
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Assign to:</b>
+                                Nurse A Test
+                              </p>
+                            </div>                        
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Assigned by:</b>
+                                Brooke Lemmo
+                              </p>
+                            </div>                        
+                            <!-- <div class="col-12 col-sm-2">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Viewers:</b>
+                                Brooke Lemmo
+                              </p>                          
+                            </div> -->
+                            <!-- <div class="col-12 col-sm-3">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Backup Owners:</b>
+                                Brooke Lemmo
+                              </p>
+                            </div> -->
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Approver:</b>
+                                Brooke Lemmo
+                              </p>
+                            </div>                                              
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="card-title m-0 mb-2">General Information</p>
+                      <div class="card bg-light border">                    
+                        <div class="card-body pb-3">
+                          <div class="row">
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Name:</b>
+                                Job Description and/or other Document(s)
+                              </p>
+                            </div>                        
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Description:</b>
+                                ----
+                              </p>
+                            </div>                        
+                            <!-- <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Category:</b>
+                                CIHQ Standards and Requirements
+                              </p>                          
+                            </div>
+                            <div class="col-12 col-sm-2">
+                              <p class="m-0">
+                                <b class="text-primary mr-4">Sub Category:</b>
+                                Competency of Staff
+                              </p>
+                            </div> -->
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Due Date:</b>
+                                April 30, 2022
+                              </p>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                              <b class="text-primary mr-2">Recurrence:</b>
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence" disabled>
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div> 
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Head's Up Days:</b>
+                                2 Days
+                              </p>
+                            </div> 
+                            <div class="col-12 col-sm-4">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Urgent Days:</b>
+                                1 Day
+                              </p>
+                            </div>                                               
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pb-5 mb-5 border-bottom"></div>
+
+                      <p class="card-title m-0 mb-2">Related Objectives</p>
+                      <table id="data-table-generate-report-action-related-objectives" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Assign To</th>
+                              <th>Status</th>
+                              <th>Due Date</th>
+                              <!-- <th>Category</th>
+                              <th>Sub Category</th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td>Job Description and/or other Document(s)</td>
+                              <td>Nurse B Test</td>
+                              <td>Pending</td>
+                              <td>April 30, 2022</td>
+                              <!-- <td>CIHQ Standards and Requirements</td>
+                              <td>Competency of Staff</td> -->
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="pb-5 mb-5 border-bottom"></div>
+
+                      <p class="card-title m-0 mb-2">Action Items</p>
+                      <div class="mb-4">
+                        <small>Progress:</small>
+                        <div class="progress" style="height: 20px;">
+                          <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>  
+                      </div>
+                      <table id="data-table-generate-report-action-items" class="table table-striped table-bordered mb-5" style="width:100%">
+                        <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Description</th>
+                              <th>Assign To</th>
+                              <th>Due Date</th>
+                              <th>Status</th>
+                              <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td><div class="text-wrap">The minimum education, training experience, health clearances and, where applicable, licensure</div></td>
+                              <td>CIHQ Standards and Requirements</td>
+                              <td>Nurse A Test</td>
+                              <td>April 30, 2022</td>
+                              <td>Completed</td>
+                              <td class="text-center">
+                                <a href="javascript:void(0);" class="btn btn-primary btn-sm">
+                                  <i class="fa-solid fa-check pr-2"></i> Complete
+                                </a>
+                                <a href="javascript:void(0);" class="btn btn-dark btn-sm">
+                                  <i class="fa-solid fa-xmark pr-2"></i> Mark as N/A
+                                </a>
+                              </td>
+                          </tr>
+                          <tr>
+                            <td><div class="text-wrap">The principal duties and responsibilities of the job position</div></td>
+                            <td>CIHQ Standards and Requirements</td>
+                            <td>Nurse A Test</td>
+                            <td>April 30, 2022</td>
+                            <td>Completed</td>
+                            <td class="text-center">
+                              <a href="javascript:void(0);" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-check pr-2"></i> Complete
+                              </a>
+                              <a href="javascript:void(0);" class="btn btn-dark btn-sm">
+                                <i class="fa-solid fa-xmark pr-2"></i> Mark as N/A
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="pb-5 mb-5 border-bottom"></div>
+
+                      <p class="card-title m-0 mb-2">Refference Materials</p>
+                      <ul class="nav nav-tabs" id="setting-panel" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="refference-materials-tab" data-toggle="tab" href="#refference-materials-section" role="tab" aria-controls="refference-materials-section" aria-expanded="true">
+                            Refference Materials <span class="badge badge-light ml-3">0</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="attachments-tab" data-toggle="tab" href="#attachments-section" role="tab" aria-controls="attachments-section">
+                            Attachments <span class="badge badge-light ml-3">0</span>
+                          </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                          <a class="nav-link" id="playbook-files-tab" data-toggle="tab" href="#playbook-files-section" role="tab" aria-controls="playbook-files-section">
+                            Playbook Files <span class="badge badge-light ml-3">0</span>
+                          </a>
+                        </li> -->
+                      </ul>
+                      <div class="tab-content" id="setting-content">
+                        <div class="tab-pane fade show active scroll-wrapper" id="refference-materials-section" role="tabpanel" aria-labelledby="refference-materials-section">
+                          <div class="wrapper wrapper-content animated fadeInRight">            
+                            <div class="card bg-light border mb-5">                    
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-12 col-sm-6">
+                                    <p class="m-0">
+                                      <b class="text-primary mr-2">Name:</b>
+                                      ----
+                                    </p>
+                                  </div>                        
+                                  <div class="col-12 col-sm-6">
+                                    <p class="m-0">
+                                      <b class="text-primary mr-2">Action:</b>
+                                      ----
+                                    </p>
+                                  </div>                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                    
+                        <div class="tab-pane fade" id="attachments-section" role="tabpanel" aria-labelledby="attachments-section">
+                          <div class="wrapper wrapper-content animated fadeInRight">            
+                            <div class="card bg-light border mb-5">                    
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-12 col-sm-6">
+                                    <p class="m-0">
+                                      <b class="text-primary mr-2">Name:</b>
+                                      ----
+                                    </p>
+                                  </div>                        
+                                  <div class="col-12 col-sm-6">
+                                    <p class="m-0">
+                                      <b class="text-primary mr-2">Action:</b>
+                                      ----
+                                    </p>
+                                  </div>                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="tab-pane fade" id="playbook-files-section" role="tabpanel" aria-labelledby="playbook-files-section">
+                          <div class="wrapper wrapper-content animated fadeInRight">            
+                            <div class="card bg-light border mb-5">                    
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-12 col-sm-6">
+                                    <p class="m-0">
+                                      <b class="text-primary mr-2">Name:</b>
+                                      ----
+                                    </p>
+                                  </div>                        
+                                  <div class="col-12 col-sm-6">
+                                    <p class="m-0">
+                                      <b class="text-primary mr-2">Action:</b>
+                                      ----
+                                    </p>
+                                  </div>                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                      <div class="mb-5 border-bottom"></div>
+
+                      <p class="card-title m-0 mb-2">Comments and Notes</p>
+                      <div class="accordion collapase-card" id="commentsAndNotesAccordion">
+                        <div class="card bg-light border">
+                          <div class="card-header" id="commentsAndNotes">
+                            <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#commentsAndNotesSection" aria-expanded="true" aria-controls="commentsAndNotesSection">User Comments</a>
+                          </div>
+                          <div id="commentsAndNotesSection" class="collapse" aria-labelledby="commentsAndNotes" data-parent="#commentsAndNotesAccordion">
+                            <div class="card-body pt-4">
+                              <textarea name="user-comments" class="form-control" rows="4"></textarea>
+                              <div class="w-100 mt-3">
+                                <span class="font-weight-bold mr-5">Notify by email: </span>
+                                <span class="mr-5">
+                                  <input type="checkbox" id="owner" class="form-check-input">
+                                  <label for="owner">Owner</label>
+                                </span>
+                                <!-- <span class="mr-5">
+                                  <input type="checkbox" id="viewer" class="form-check-input">
+                                  <label for="viewer">Viewer</label>
+                                </span> -->
+                                <!-- <span class="mr-5">
+                                  <input type="checkbox" id="backup-owners" class="form-check-input">
+                                  <label for="backup-owners">Backup Owners</label>
+                                </span> -->
+                                <!-- <span class="mr-5">
+                                  <input type="checkbox" id="approver" class="form-check-input">
+                                  <label for="approver">Approver</label>
+                                </span> -->
+                                <button type="button" class="btn btn-primary btn-icon-text btn-sm float-right">
+                                  <i class="fa-solid fa-comment-medical"></i> Add Comment
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p class="card-title m-0 mb-2">Approval File Upload</p>
+                      <div class="accordion collapase-card" id="approvalFileUploadAccordion">
+                        <div class="card bg-light border">
+                          <div class="card-header" id="approvalFileUpload">
+                            <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#approvalFileUploadSection" aria-expanded="true" aria-controls="approvalFileUploadSection">Document Name</a>
+                          </div>
+                          <div id="approvalFileUploadSection" class="collapse" aria-labelledby="approvalFileUpload" data-parent="#approvalFileUploadAccordion">
+                            <div class="card-body pt-4">
+                              
+                              <section>
+                                <div id="dropzone">
+                                  <form class="dropzone needsclick" id="demo-upload" action="/upload">
+                                    <!-- 
+                                      Uncomment this section for original File Upload Placeholder
+                                    -->
+                                    <!-- <div class="dz-message needsclick d-flex justify-content-center">
+                                      <i class="fa-solid fa-cloud-arrow-up fa-5x d-block"></i>
+                                      Drop files here or click to upload.<br />
+                                    </div> -->
+                                      
+                                    <div class="dz-message needsclick">
+                                      <div class="row row-cols-3 row-cols-md-6 justify-content-center">
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-word fa-4x d-block"></i>
+                                            <span>Filename 1</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-excel fa-4x d-block"></i>
+                                            <span>Filename 2</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-powerpoint fa-4x d-block"></i>
+                                            <span>Filename 3</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-pdf fa-4x d-block"></i>
+                                            <span>Filename 4</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-image fa-4x d-block"></i>
+                                            <span>Filename 5</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-word fa-4x d-block"></i>
+                                            <span>Filename 1</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-excel fa-4x d-block"></i>
+                                            <span>Filename 2</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-powerpoint fa-4x d-block"></i>
+                                            <span>Filename 3</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-pdf fa-4x d-block"></i>
+                                            <span>Filename 4</span>
+                                          </div>
+                                        </div>
+
+                                        <div class="col mb-4">
+                                          <div class="border rounded shadow-sm p-4">
+                                            <i class="fa-solid fa-file-image fa-4x d-block"></i>
+                                            <span>Filename 5</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </section>
+
+                              <hr class="mx-5">
+                              
+                              <div class="col-12 border-bottom py-2">
+                                <span><i class="fa-solid fa-file-pdf mr-2 py-2"></i> File Demo1.pdf</span>
+                                <button type="button" class="btn btn-primary btn-icon-text btn-sm float-right">
+                                  <i class="fa-solid fa-file-export"></i> Preview
+                                </button>
+                              </div>
+
+                              <div class="col-12 border-bottom py-2">
+                                <span><i class="fa-solid fa-file-word mr-2 py-2"></i> File Demo 2.doc</span>
+                                <button type="button" class="btn btn-primary btn-icon-text btn-sm float-right">
+                                  <i class="fa-solid fa-file-export"></i> Preview
+                                </button>
+                              </div>
+
+                              <div class="col-12 border-bottom py-2">
+                                <span><i class="fa-solid fa-file-excel mr-2 py-2"></i> File Demo 3.xls</span>
+                                <button type="button" class="btn btn-primary btn-icon-text btn-sm float-right">
+                                  <i class="fa-solid fa-file-export"></i> Preview
+                                </button>
+                              </div>
+
+                              <div class="col-12 border-bottom py-2">
+                                <span><i class="fa-solid fa-file-powerpoint mr-2 py-2"></i> File Demo 4.ppt</span>
+                                <button type="button" class="btn btn-primary btn-icon-text btn-sm float-right">
+                                  <i class="fa-solid fa-file-export"></i> Preview
+                                </button>
+                              </div>
+
+                              <div class="col-12 border-bottom py-2">
+                                <span><i class="fa-solid fa-file-image mr-2 py-2"></i> File Demo 5.jpg</span>
+                                <button type="button" class="btn btn-primary btn-icon-text btn-sm float-right">
+                                  <i class="fa-solid fa-file-export"></i> Preview
+                                </button>
+                              </div>
+
+                              <!-- <div class="w-100">
+                                <span><i class="fa-solid fa-file-pdf mr-2"></i> File Demo1.pdf</span>
+                                <a class="btn btn-primary float-right" role="button" data-toggle="tooltip" data-placement="right" title="Preview">
+                                  <i class="fa-solid fa-eye fa-sm ml-3 text-primary"></i>
+                                </a>
+                              </div>
+
+                              <div class="w-100">
+                                <span><i class="fa-solid fa-file-word mr-2"></i> File Demo 2.doc</span>
+                                <a class="btn btn-primary float-right" role="button" data-toggle="tooltip" data-placement="right" title="Preview">
+                                  <i class="fa-solid fa-eye fa-sm ml-3 text-primary"></i>
+                                </a>
+                              </div>
+
+                              <div class="w-100">
+                                <span><i class="fa-solid fa-file-excel mr-2"></i> File Demo 3.xls</span>
+                                <a class="btn btn-primary float-right" role="button" data-toggle="tooltip" data-placement="right" title="Preview">
+                                  <i class="fa-solid fa-eye fa-sm ml-3 text-primary"></i>
+                                </a>
+                              </div>
+
+                              <div class="w-100">
+                                <span><i class="fa-solid fa-file-powerpoint mr-2"></i> File Demo 4.ppt</span>
+                                <a class="btn btn-primary float-right" role="button" data-toggle="tooltip" data-placement="right" title="Preview">
+                                  <i class="fa-solid fa-eye fa-sm ml-3 text-primary"></i>
+                                </a>
+                              </div>
+
+                              <div class="w-100">
+                                <span><i class="fa-solid fa-file-image mr-2"></i> File Demo 5.jpg</span>
+                                <a class="btn btn-primary float-right" role="button" data-toggle="tooltip" data-placement="right" title="Preview">
+                                  <i class="fa-solid fa-eye fa-sm ml-3 text-primary"></i>
+                                </a>
+                              </div> -->
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pb-4 mb-4 border-bottom"></div>
+
+                      <!-- <div class="pl-4">
+                        <span class="mr-5">
+                          <input type="checkbox" id="chart" class="form-check-input">
+                          <label for="chart">Add to Transparency Chart</label>
+                        </span>
+                        <span class="mr-5">
+                          <input type="checkbox" id="calendar" class="form-check-input">
+                          <label for="calendar">Add to Calendar</label>
+                        </span>
+                      </div> -->
+                      
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+            <div class="modal-footer py-2">
+              <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-check mr-3"></i> Complete</button>
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-sent-for-approval"><i class="fa fa-paper-plane mr-3"></i> Sent for Approval</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-rectangle-xmark pr-2"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Send for Approval Modal -->
+      <div class="modal fade" id="modal-sent-for-approval" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">              
+            <div class="modal-header p-3 pr-4">
+              <h5 class="modal-title"><i class="mdi  mdi mdi-format-indent-increase"></i> Approve / Reject</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body p-4 overflow-auto" style="scrollbar-width: thin; background: #f5f7ff">
+              <div class="row">
+                <div class="col-12">
+                  <textarea name="reason" id="reason" rows="10" placeholder="Reason" class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer py-2">                
+              <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-thumbs-up"></i> Approve</button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fa-regular fa-thumbs-down"></i> Reject</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-ban pr-2"></i> Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>    
+  <script src="js/dashboard.js"></script> 
+  <script src="js/chart.js"></script>
+  <script src="js/calendar-main.js"></script>
+
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.js" integrity="sha512-9e9rr82F9BPzG81+6UrwWLFj8ZLf59jnuIA/tIf8dEGoQVu7l5qvr02G/BiAabsFOYrIUTMslVN+iDYuszftVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script>
+    $.fn.extend({
+        treed: function (o) {          
+          var openedClass = 'fa-minus-circle';
+          var closedClass = 'fa-plus-circle';
+          
+          if (typeof o != 'undefined'){
+            if (typeof o.openedClass != 'undefined'){
+              openedClass = o.openedClass;
+            }
+            if (typeof o.closedClass != 'undefined'){
+              closedClass = o.closedClass;
+            }
+          };
+          
+          //initialize each of the top levels
+          var tree = $(this);
+          tree.addClass("tree");
+          tree.find('li').has("ul").each(function () {
+            var branch = $(this); //li with children ul
+            branch.prepend("<i class='indicator fa " + closedClass + "'></i>");
+            branch.addClass('branch');
+            branch.on('click', function (e) {
+              if (this == e.target) {
+                var icon = $(this).children('i:first');
+                icon.toggleClass(openedClass + " " + closedClass);
+                $(this).children().children().toggle();
+              }
+            })
+            branch.children().children().toggle();
+          });
+          
+          //fire event from the dynamically added icon
+          tree.find('.branch .indicator').each(function(){
+            $(this).on('click', function () {
+              $(this).closest('li').click();
+            });
+          });
+          
+          //fire event to open branch if the li contains an anchor instead of text
+          tree.find('.branch>a').each(function () {
+            $(this).on('click', function (e) {
+              $(this).closest('li').click();
+              e.preventDefault();
+            });
+          });
+          
+          //fire event to open branch if the li contains a button instead of text
+          tree.find('.branch>button').each(function () {
+            $(this).on('click', function (e) {
+              $(this).closest('li').click();
+              e.preventDefault();
+            });
+          });
+        }
+      });
+
+      function launchReportActionModal() {
+        $('#modal-fullscreen-xl-generate-report-action').modal('show');        
+      }
+
+      //Initialization of treeviews
+      $('#tree1').treed();
+      $('#tree2').treed();
+  </script>
+</body>
+
+</html>

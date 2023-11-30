@@ -1,0 +1,1024 @@
+/* 
+    Required Style
+  * Puts a red asterisk at the end of a label.
+*/
+.required:after {
+  content: " *";
+  color: red;
+}
+
+
+
+/* 
+    Smallest Text Style
+  * Creating a very small typography.
+*/
+.smallest {
+  font-size: 9px;
+  line-height: 8px;
+}
+
+
+
+/* 
+    Smallest Text Style
+  * Creating a very small typography.
+*/
+.settings-trigger-top {
+  top: 90px;
+  right: 20px !important;
+}
+
+
+
+/* 
+    Tags Style
+  * Styling for the input tags.
+*/
+.bootstrap-tagsinput {
+  width: 100%;
+  display: block;
+  width: 100%;
+  /* height: 2.875rem; */
+  padding: 0.875rem 1.375rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #495057;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.label-info {
+  background-color: #4b49ac;
+}
+.label {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  margin: 0.1em 0em;
+  font-size: 100%;  
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#creators-hub-simulate-viewer > .bootstrap-tagsinput {
+  /* height: 100px; */
+  width: 100%;
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #495057;
+  background-color: transparent !important;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: none;
+  font-family:Arial, FontAwesome;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ced4da; 
+}
+
+
+
+
+
+/* 
+    Post Style
+  * Custom Forum Post List Styling
+*/
+.forum-avatar {
+  float: left;
+  margin-right: 20px;
+  text-align: center;
+  width: 80px;
+}
+.forum-avatar .img-circle {
+  height: 48px;
+  width: 48px;
+}
+.forum-item {
+  margin: 10px 0;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.views-number {
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.forum-container,
+.forum-post-container {
+  padding: 0px !important;
+}
+.forum-item small {
+  color: #999;
+}
+.forum-item .forum-sub-title {
+  color: #363636;
+  margin-left: 100px;
+}
+.forum-title {
+  margin: 15px 0 15px 0;
+}
+.forum-info {
+  text-align: center;
+}
+.forum-desc {
+  color: #363636;
+}
+.forum-icon {
+  float: left;
+  width: 30px;
+  margin-right: 20px;
+  text-align: center;
+}
+a.forum-item-title {
+  color: inherit;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 100px;
+}
+a.forum-item-title:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.forum-icon .fa {
+  font-size: 30px;
+  margin-top: 8px;
+  color: #9b9b9b;
+}
+
+.forum-item.active a.forum-item-title {
+  color: #5662ce;
+}
+@media (max-width: 992px) {
+  .forum-info {
+    margin: 15px 0 10px 0;
+  }
+  .forum-desc {
+    float: none !important;
+  }
+}
+
+
+
+
+
+/*  
+    Toggle Style
+  * Custom Slider Styling
+*/
+.custom-toggle {
+  padding: 0px;
+  width: 100%;
+  display: inline;
+}
+.custom-toggle small {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 30px;
+  padding: 3px;
+  margin: 0 10px 10px 0;
+  background: linear-gradient(to bottom, #eeeeee, #ffffff 25px);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #ffffff 25px);
+  border-radius: 18px;
+  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+label {
+  font-weight: inherit;
+}
+.switchToggle label {
+  width: 100px !important;
+  max-width: 100px !important;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 4px 0 0;
+
+  line-height: normal;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  box-sizing: content-box;
+}
+.switch-left-right .switch-input:checked ~ .switch-label {
+  background: inherit;
+}
+.switch-input:checked ~ .switch-label {
+  /* background: #E1B42B; */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-left-right .switch-label {
+  overflow: hidden;
+}
+.switch-label,
+.switch-handle {
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+}
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  box-sizing: content-box;
+}
+.switch-left-right .switch-input:checked ~ .switch-label:before {
+  opacity: 1;
+  left: 100px;
+}
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+.switch-left-right .switch-label:before {
+  background: #eceeef;
+  text-align: left;
+  padding-left: 80px !important;
+}
+.switch-left-right .switch-label:before,
+.switch-left-right .switch-label:after {
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 11px 0 0 0;
+  text-indent: -12px;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #aaaaaa;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+span.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: #ffffff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.switch-label:before,
+.switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+  box-sizing: content-box;
+}
+
+.switch-left-right .switch-input:checked ~ .switch-label:after {
+  left: 0 !important;
+  opacity: 1;
+  padding-left: 20px;
+}
+
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+.switch-left-right .switch-label:after {
+  text-align: left;
+  text-indent: 9px;
+  background: #4b49ac !important;
+  left: -100px !important;
+  opacity: 1;
+  width: 100% !important;
+}
+.switch-left-right .switch-label:before,
+.switch-left-right .switch-label:after {
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 11px 0 0 0;
+  text-indent: -12px;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.switch-input:checked ~ .switch-handle {
+  left: 74px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-label,
+.switch-handle {
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(to bottom, #ffffff 40%, #f0f0f0);
+  background-image: -webkit-linear-gradient(top, #ffffff 40%, #f0f0f0);
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-handle:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(to bottom, #eeeeee, #ffffff);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #ffffff);
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+
+
+
+
+
+/*  
+    Tree Style
+  * Custom Tree Like Structure Styling
+*/
+.tree, .tree ul {
+  margin:0;
+  padding:0;
+  list-style:none
+}
+.tree ul {
+  margin-left:1em;
+  position:relative
+}
+.tree ul ul {
+  margin-left:.5em
+}
+.tree ul:before {
+  content:"";
+  display:block;
+  width:0;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  border-left:1px solid
+}
+.tree li {
+  margin:0;
+  padding:0 1em;
+  line-height:2em;  
+  position:relative
+}
+.tree ul li:before {
+  content:"";
+  display:block;
+  width:10px;
+  height:0;
+  border-top:1px solid;
+  margin-top:-1px;
+  position:absolute;
+  top:1em;
+  left:0
+}
+.tree ul li:last-child:before {
+  background:#fff;
+  height:auto;
+  top:1em;
+  bottom:0
+}
+.indicator {
+  margin-right:5px;
+}
+.tree li a {
+  text-decoration: none; 
+}
+.tree li button, .tree li button:active, .tree li button:focus {
+  text-decoration: none;  
+  border:none;
+  background:transparent;
+  margin:0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
+  outline: 0;
+}
+
+
+
+
+
+/*  
+    Modal Style
+  * Custom Full Screen Modal Styling
+*/
+body.modal-open {
+  overflow: hidden;
+  /* position: fixed; */
+}
+
+.modal.modal-fullscreen .modal-dialog {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: none; 
+}
+
+.modal.modal-fullscreen .modal-content {
+  height: auto;
+  height: 100vh;
+  border-radius: 0;
+  border: none; 
+}
+
+.modal.modal-fullscreen .modal-body {
+  overflow-y: auto;
+}
+
+/* Custome Modal Error */
+
+.modal-confirm.modal-dialog {
+  margin-top: 200px;
+}
+
+.modal-confirm {
+  color: #636363;
+  width: 325px;
+}
+
+.modal-confirm .modal-icon-box {
+  color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #ef513a;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/*  
+    Tooltip Bypass Style
+  * Custom Tooltip Bypass Styling
+*/
+.tooltip {
+  z-index: 100000000; 
+}
+
+
+
+
+
+/*  
+    Collapsible Card Style
+  * Custom Collapsible Card Styling
+*/
+.collapase-card .card {
+  margin-bottom: 30px;
+  border: 0;
+}
+
+.collapase-card .card .card-header {
+  border: 0;
+  -webkit-box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+          box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+  border-radius: 2px;
+  padding: 0;
+}
+
+.collapase-card .card .card-header .btn-header-link {
+  color: #fff;
+  display: block;
+  text-align: left;
+  padding: 20px;
+}
+
+.collapase-card .card .card-header .btn-header-link:before {
+  content: "" !important;
+}
+
+.collapase-card .card .card-header .btn-header-link:after {
+  content: "\f107";
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  float: right;
+}
+
+.collapase-card .card .card-header .btn-header-link.collapsed:after {
+  content: "\f106";
+}
+
+.collapase-card .card .collapsing {
+  line-height: 30px;
+}
+
+.collapase-card .card .collapse {
+  border: 0;
+}
+
+.collapase-card .card .collapse.show {
+  line-height: 30px;
+}
+
+
+
+
+
+/*  
+    Accordion Card Style
+  * Custom Accordion Card Styling
+*/
+.myaccordion {
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 10px 29px -16px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 10px 29px -16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 10px 29px -16px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden; 
+}
+
+.myaccordion .myaccordion-fa {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.myaccordion .card-header .btn {
+  width: 100%;
+  font-weight: normal;
+  color: #000;
+  padding: 0;
+  letter-spacing: 0;
+  font-size: 18px;
+  border-radius: 0 !important;
+  -webkit-box-shadow: 0px 8px 18px -16px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 8px 18px -16px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 8px 18px -16px rgba(0, 0, 0, 0.19);
+}
+
+.myaccordion .btn:hover {
+  -webkit-box-shadow: 0px 8px 18px -16px rgba(0, 0, 0, 0.19) !important;
+  -moz-box-shadow: 0px 8px 18px -16px rgba(0, 0, 0, 0.19) !important;
+  box-shadow: 0px 8px 18px -16px rgba(0, 0, 0, 0.19) !important;
+}
+
+.myaccordion .btn:focus {
+  -webkit-box-shadow: 0px 12px 18px -16px rgba(0, 0, 0, 0.37) !important;
+  -moz-box-shadow: 0px 12px 18px -16px rgba(0, 0, 0, 0.37) !important;
+  box-shadow: 0px 12px 18px -16px rgba(0, 0, 0, 0.37) !important;
+}
+
+.myaccordion .btn-link:hover, .myaccordion .btn-link:focus {
+  text-decoration: none;
+}
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f106";
+  font-family: "FontAwesome";
+  font-style: normal;
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f107";
+  font-family: "FontAwesome";
+  font-style: normal; 
+}
+
+
+
+
+
+/*  
+    Star Rating Style
+  * Custom Star Rating Styling
+*/
+div.stars {
+  display: inline-block
+}
+
+input.star {
+  display: none
+}
+
+label.star {
+  float: right;
+  padding: 5px;
+  font-size: 16px;
+  color: #4b49ac;
+  transition: all .2s
+}
+
+input.star:checked~label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s
+}
+
+input.star-5:checked~label.star:before {
+  color: #fdbf44;
+}
+
+input.star-1:checked~label.star:before {
+  color: #a3a4a5 
+}
+
+label.star:hover {
+  transform: rotate(-15deg) scale(1.3)
+}
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome
+}
+
+
+
+
+
+/*  
+    Comment Style
+  * Custom Comment Styling
+*/
+.comment {
+  overflow: hidden;
+  padding: 0 0 1em;
+  margin: 0 0 1em;
+  *zoom: 1;
+}
+.comment-img {
+  float: left;
+  margin-right: 33px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.comment-img img {
+  display: block;
+}
+.comment-body {
+  overflow: hidden;
+}
+.comment .text {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background: #fff;
+}
+.comment .text p:last-child {
+  margin: 0;
+}
+.comment .attribution {
+  margin: 0.5em 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Decoration */
+.comments,
+.comment {
+  position: relative;
+}
+.comments:before,
+.comment:before,
+.comment .text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 65px;
+}
+.comments:before {
+  width: 3px;
+  top: -20px;
+  bottom: -20px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.comment:before {
+  width: 9px;
+  height: 9px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  margin: 16px 0 0 -6px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: #ccc;
+}
+.comment:hover:before {
+  background: orange;
+}
+.comment .text:before {
+  top: 18px;
+  left: 78px;
+  width: 9px;
+  height: 9px;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+
+
+
+
+/*  
+    Star Rating Style
+  * Custom Star Rating Styling
+*/
+.creators-hub-input-text {
+  font-family:Arial, FontAwesome;
+  border: none;
+  width: 95%;
+  margin-bottom: 3px;  
+}
+
+.creators-hub-input-text ~ .creators-hub-input-text-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ced4da;
+}
+
+.creators-hub-input-text:focus ~ .creators-hub-input-text-border {
+  width: 100%;
+  transition: 0.75s;
+}
+
+.creators-hub-simulate-modal-input-text {
+  font-family:Arial, FontAwesome;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ced4da;  
+}
+
+.creators-hub-simulate-modal-input-text:focus{
+  border-bottom: 1px solid #ced4da;
+}
+
+.creators-hub-items-level1 {
+  padding-left: 0px;
+}
+
+.creators-hub-items-level2 {
+  padding-left: 20px;
+}
+
+.creators-hub-items-level3 {
+  padding-left: 40px;
+}
+
+.creators-hub-items-level4 {
+  padding-left: 60px;
+}
+
+.creators-hub-items-level5 {
+  padding-left: 80px;
+}
+
+
+
+
+
+/*  
+    Callout Style
+  * Custom Callout Styling
+*/
+.callout {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+.callout code {
+  border-radius: 3px;
+}
+.callout + .bs-callout {
+  margin-top: -5px;
+}
+.callout-default {
+  border-left-color: #777;
+}
+.callout-default h4 {
+  color: #777;
+}
+.callout-primary {
+  border-left-color: #428bca;
+}
+.callout-primary h4 {
+  color: #428bca;
+}
+.callout-success {
+  border-left-color: #5cb85c;
+}
+.callout-success h4 {
+  color: #5cb85c;
+}
+.callout-danger {
+  border-left-color: #d9534f;
+}
+.callout-danger h4 {
+  color: #d9534f;
+}
+.callout-warning {
+  border-left-color: #f0ad4e;
+}
+.callout-warning h4 {
+  color: #f0ad4e;
+}
+.callout-info {
+  border-left-color: #5bc0de;
+}
+.callout-info h4 {
+  color: #5bc0de;
+}
+.callout-bdc {
+  border-left-color: #29527a;
+}
+.callout-bdc h4 {
+  color: #29527a;
+}
+.callout-main {
+  border-left-color: #3f3e91;
+}
+.callout-main h4 {
+  color: #3f3e91;
+}
+
+
+
+
+
+/*  
+    DropZone Style
+  * Custom DropZone Styling
+*/
+.dropzone {
+  background: white;
+  border-radius: 5px;
+  border: 2px dashed #3f3e91;
+  border-image: none;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.fa-sm {
+  font-size: 14px !important;
+}
+.fa-4x {
+  font-size: 4em !important;
+}
+.fa-5x {
+  font-size: 5em !important;
+}
+
+
+
+
+
+/*  
+    DropZone Style
+  * Custom DropZone Styling
+*/
+.badge-checkboxes .checkbox input[type="checkbox"],
+.badge-checkboxes label.checkbox-inline input[type="checkbox"] {
+    /*  Hide the checkbox, but keeps tabbing to it possible. */
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.badge-checkboxes .checkbox label,
+.badge-checkboxes label.checkbox-inline {
+    padding-left:0; /* Remove space normally used for the checkbox */
+}
+
+.badge-checkboxes .checkbox input[type="checkbox"]:checked:focus + .badge,
+.badge-checkboxes label.checkbox-inline input[type="checkbox"]:checked:focus + .badge {
+    box-shadow:0 0 2pt 1pt #333;  /* Outline when checkbox is focused/tabbed to */
+}
+
+.badge-checkboxes .checkbox input[type="checkbox"]:focus + .badge,
+.badge-checkboxes label.checkbox-inline input[type="checkbox"]:focus + .badge {
+    box-shadow:0 0 2pt 1pt #999;  /* Outline when checkbox is focused/tabbed to */
+}
+
+.badge-checkboxes .checkbox input[type="checkbox"] + .badge,
+.badge-checkboxes label.checkbox-inline input[type="checkbox"] + .badge {
+    border:1px solid #4b49ac;; /* Add outline to badge */
+    background-color: #3f3e91;
+    color: #fff;
+    /* Make text in badge not selectable */
+   -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Give badges for disabled checkboxes an opacity of 50% */
+.badge-checkboxes .checkbox input[type="checkbox"]:disabled + .badge,
+.badge-checkboxes label.checkbox-inline input[type="checkbox"]:disabled + .badge
+{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;   
+}
+
+/* Remove badge background-color and set text color for not checked options */
+.badge-checkboxes .checkbox input[type="checkbox"]:not(:checked) + .badge,
+.badge-checkboxes label.checkbox-inline input[type="checkbox"]:not(:checked) + .badge{
+    background-color:Transparent;
+    color:#4b49ac;
+}
+
+/* Make List Item Bullets Check in font icon */
+
+ul.list-check {
+  --icon-space: 1.3em;
+  list-style: none;
+  padding: 0;
+}
+
+ul.list-check > li {
+  padding-left: var(--icon-space);
+}
+
+ul.list-check > li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc( var(--icon-space) * -1 );
+  width: var(--icon-space);
+}
+
+#list-check-error > li:before {
+  color: #ff4747;
+}

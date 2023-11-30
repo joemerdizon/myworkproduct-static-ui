@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Work Product</title>
+  
+  <link rel="shortcut icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="vendors/feather/feather.css">  
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">   
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">  
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css"> 
+  <link rel="stylesheet" href="css/calendar-main.css">   
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/standard.css">
+  <style>
+    .thumb-icon {
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">        
+
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>          
+          <li class="nav-item nav-settings d-none d-lg-flex mx-2">
+            <a class="nav-link" href="#">
+              <i class="ti-settings"></i>
+            </a>
+          </li>          
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face0.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="profile-information.html" class="dropdown-item">
+                <i class="ti-user text-primary"></i>
+                Profile
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <p class="settings-heading">SIDEBAR COLOR</p>
+        <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+        <p class="settings-heading mt-2">HEADER COLOR</p>
+        <div class="color-tiles mx-0 px-4">
+          <div class="tiles default"></div>
+          <div class="tiles dark"></div>                        
+          <div class="tiles"></div>     
+          <div class="tiles"></div>     
+          <div class="tiles success"></div>
+          <div class="tiles danger"></div>
+          <div class="tiles warning"></div>            
+          <div class="tiles info"></div>            
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">              
+              <i class="fa-solid fa-gauge menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
+              <i class="fa-solid fa-tasks menu-icon"></i>
+              <span class="menu-title">Task</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-task">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="create-workflow.html">Create Workflow</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-workflow.html">Assign Workflow</a></li>
+              </ul>
+            </div>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-reports" aria-expanded="false" aria-controls="nav-item-reports">
+              <i class="fa-solid fa-file-lines menu-icon"></i>
+              <span class="menu-title">Work Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-reports">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="view-work-product-template.html">View Work Product Template</a></li>
+                <li class="nav-item"> <a class="nav-link" href="generate-work-product.html">Generate Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-work-product.html">Assign Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">My Generated Work Product</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creators-hub.html">
+              <i class="fa-solid fa-desktop menu-icon"></i>
+              <span class="menu-title">Creators Hub</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">
+              <i class="fa-solid fa-ticket menu-icon"></i>
+              <span class="menu-title">Tickets</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-tickets">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="generate-ticket-report.html">Generate Ticket Report</a></li>
+                <li class="nav-item"> <a class="nav-link" href="submit-a-ticket.html">Submit a Ticket</a></li>
+              </ul>
+            </div>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-approval" aria-expanded="false" aria-controls="nav-item-approval">
+              <i class="fa-solid fa-thumbs-up menu-icon"></i>
+              <span class="menu-title">Approval</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-approval">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#">Request</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Submit</a></li>
+              </ul>
+            </div>
+          </li>                   
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">              
+              <i class="fa-solid fa-laptop-file menu-icon"></i>
+              <span class="menu-title">Files</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="comments-and-notes.html">              
+              <i class="fa-solid fa-comments menu-icon"></i>
+              <span class="menu-title">Comments and Notes</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="market-place.html">              
+              <i class="fa-solid fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">Market Place</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">              
+              <i class="fa-solid fa-phone-square menu-icon"></i>
+              <span class="menu-title">Contacts</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-settings" aria-expanded="false" aria-controls="nav-item-settings">
+              <i class="fa-solid fa-cogs menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-settings">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="import-task-categories-and-sub-categories.html">Import Data</a></li>
+              </ul>
+            </div>
+          </li>          
+        </ul>
+      </nav>
+      <!-- partial -->
+
+      <div class="main-panel">
+        <div class="content-wrapper">          
+          <div class="row">
+            <div class="col-md-3 col-12 grid-margin stretch-card">
+              <div class="card bg-transparent">
+                <div class="card-body p-0 m-0">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="list-group rounded">
+                        <a href="profile-information.html" class="list-group-item list-group-item-action">
+                          <i class="fa-solid fa-user mr-2"></i>Profile Information
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                          <i class="fa-solid fa-heart mr-2"></i>Favorites
+                        </a>
+                        <a href="profile-people.html" class="list-group-item list-group-item-action">
+                          <i class="fa-solid fa-people-group mr-2"></i>People
+                        </a>
+                        <a href="profile-login-and-security.html" class="list-group-item list-group-item-action">
+                          <i class="fa-solid fa-shield-halved mr-2"></i>Login &amp; Security
+                        </a>
+                        <a href="profile-billing.html" class="list-group-item list-group-item-action active">
+                          <i class="fa-solid fa-receipt mr-2"></i>Billing
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+            <div class="col-md-9 col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">
+                    <i class="fa-solid fa-credit-card"></i> 
+                    Payment Details
+                    <a href="profile-billing.html" class="btn btn-dark btn-sm btn-icon-text float-right mr-1">
+                      <i class="fa-solid fa-arrow-left mr-1"></i>
+                      Cancel
+                    </a>
+                  </p>
+                  <div class="my-3">
+                    <hr>
+                  </div>
+                  <div id="accordion" class="myaccordion w-100 rounded mb-5">
+                    <div class="card">
+                      <div class="card-header p-0" id="noticationHeading1">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#notificationCollapse1" aria-expanded="false" aria-controls="notificationCollapse1">
+                            <p class="mb-0 text-left" style="line-height: 0.95rem;">
+                              <span class="ml-3 text-primary font-weight-bold">PayPal</span>
+                            </p>
+                            <img src="images/logos/paypal-logo.png" class="thumb-icon border shadow-sm float-right">
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="notificationCollapse1" class="collapse" aria-labelledby="noticationHeading1" data-parent="#accordion">
+                        <div class="card-body px-3">
+                          <div class="col-12 my-4">
+                            <h4 class="display-4">
+                              <i class="fa-solid fa-shield-halved"></i> PayPal is a safer, faster way to pay                              
+                              <a href="#" class="btn btn-outline-primary btn-icon-text float-right ml-2">Create a PayPal Account</a>
+                              <a href="#" class="btn btn-outline-primary btn-icon-text float-right">Login to PayPal</a>
+                            </h4>      
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="card">
+                      <div class="card-header p-0" id="noticationHeading2">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-4 px-4 align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#notificationCollapse2" aria-expanded="false" aria-controls="notificationCollapse2">
+                            <p class="mb-0 text-left" style="line-height: 0.95rem;">
+                              <span class="ml-3 text-primary font-weight-bold">Credit Card</span>
+                            </p>
+                            <div class="float-right">
+                              <img src="images/logos/american-express-logo.png" class="thumb-icon border shadow-sm">
+                              <img src="images/logos/mastercard-logo.png" class="thumb-icon border shadow-sm">
+                              <img src="images/logos/visa-logo.jpg" class="thumb-icon border shadow-sm">
+                            </div>  
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="notificationCollapse2" class="collapse" aria-labelledby="noticationHeading2" data-parent="#accordion">
+                        <div class="card-body px-3">
+                          <div class="col-12 my-4">
+                            <h5>Enter your payment details</h5>
+                            <hr>
+                            <form class="form-row">
+                              <div class="form-group col-md-12 mb-3">
+                                <label for="first_name" class="m-0">Card Number</label>
+                                <input type="text" class="form-control" id="first_name" placeholder="Card Number" autofocus>
+                              </div>
+                              <div class="form-group col-md-6 mb-3">
+                                <label for="expiry_date" class="m-0">Expiry Date</label>
+                                <input type="text" class="form-control" id="expiry_date" placeholder="MM/YY">
+                              </div>
+                              <div class="form-group col-md-6 mb-3">
+                                <label for="last_name" class="m-0">CVV Code</label>
+                                <input type="text" class="form-control" id="last_name" placeholder="••••">
+                              </div>
+                              <div class="form-group col-md-6 mb-3">
+                                <label for="first_name" class="m-0">First Name</label>
+                                <input type="text" class="form-control" id="first_name" placeholder="First Name">
+                              </div>
+                              <div class="form-group col-md-6 mb-3">
+                                <label for="last_name" class="m-0">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+                              </div>
+                              <div class="form-group col-md-12 mb-3">
+                                <button type="button" class="btn btn-primary btn-sm btn-icon-text float-right mr-2">
+                                  <i class="fa-sharp fa-solid fa-save mr-1"></i>
+                                  Save Changes
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022 - My Work Product. All rights reserved.</span>            
+          </div>          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>    
+  <script src="js/dashboard.js"></script> 
+  <script src="js/chart.js"></script>
+  <script src="js/calendar-main.js"></script>
+
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous"></script>
+</body>
+
+</html>

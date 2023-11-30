@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Work Product</title>
+  
+  <link rel="shortcut icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="vendors/feather/feather.css">  
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">  
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">  
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">  
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.css" integrity="sha512-7uSoC3grlnRktCWoO4LjHMjotq8gf9XDFQerPuaph+cqR7JC9XKGdvN+UwZMC14aAaBDItdRj3DcSDs4kMWUgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">    
+  <link rel="stylesheet" href="css/calendar-main.css">
+  <link rel="stylesheet" href="css/custom.css">      
+  <link rel="stylesheet" href="css/standard.css"> 
+  
+  <style>
+    .bootstrap-tagsinput {
+      width: 100%;
+      display: block;
+      width: 100%;
+      min-height: 2.75rem;
+      padding: 10px 0px 1px;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1;
+      color: #495057;
+      background-color: transparent;
+      background-clip: padding-box;
+      border: none;
+      border-bottom: 1px solid #ced4da;
+      border-radius: 2px;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      box-shadow: none;
+    }
+
+    .bootstrap-tagsinput input, #assigned-by {
+      font-size: .9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">        
+
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>          
+          <li class="nav-item nav-settings d-none d-lg-flex mx-2">
+            <a class="nav-link" href="#">
+              <i class="ti-settings"></i>
+            </a>
+          </li>          
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face0.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="profile-information.html" class="dropdown-item">
+                <i class="ti-user text-primary"></i>
+                Profile
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->      
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <p class="settings-heading">SIDEBAR COLOR</p>
+        <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+        <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+        <p class="settings-heading mt-2">HEADER COLOR</p>
+        <div class="color-tiles mx-0 px-4">
+          <div class="tiles default"></div>
+          <div class="tiles dark"></div>                        
+          <div class="tiles"></div>     
+          <div class="tiles"></div>     
+          <div class="tiles success"></div>
+          <div class="tiles danger"></div>
+          <div class="tiles warning"></div>            
+          <div class="tiles info"></div>            
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">              
+              <i class="fa-solid fa-gauge menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-task" aria-expanded="false" aria-controls="nav-item-task">
+              <i class="fa-solid fa-tasks menu-icon"></i>
+              <span class="menu-title">Task</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-task">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="create-workflow.html">Create Workflow</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-workflow.html">Assign Workflow</a></li>
+              </ul>
+            </div>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-reports" aria-expanded="false" aria-controls="nav-item-reports">
+              <i class="fa-solid fa-file-lines menu-icon"></i>
+              <span class="menu-title">Work Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-reports">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="view-work-product-template.html">View Work Product Template</a></li>
+                <li class="nav-item"> <a class="nav-link" href="generate-work-product.html">Generate Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="assign-work-product.html">Assign Work Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">My Generated Work Product</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creators-hub.html">
+              <i class="fa-solid fa-desktop menu-icon"></i>
+              <span class="menu-title">Creators Hub</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-tickets" aria-expanded="false" aria-controls="nav-item-tickets">
+              <i class="fa-solid fa-ticket menu-icon"></i>
+              <span class="menu-title">Tickets</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-tickets">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="generate-ticket-report.html">Generate Ticket Report</a></li>
+                <li class="nav-item"> <a class="nav-link" href="submit-a-ticket.html">Submit a Ticket</a></li>
+              </ul>
+            </div>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-approval" aria-expanded="false" aria-controls="nav-item-approval">
+              <i class="fa-solid fa-thumbs-up menu-icon"></i>
+              <span class="menu-title">Approval</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-approval">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#">Request</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Submit</a></li>
+              </ul>
+            </div>
+          </li>                   
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">              
+              <i class="fa-solid fa-laptop-file menu-icon"></i>
+              <span class="menu-title">Files</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="comments-and-notes.html">              
+              <i class="fa-solid fa-comments menu-icon"></i>
+              <span class="menu-title">Comments and Notes</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="market-place.html">              
+              <i class="fa-solid fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">Market Place</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">              
+              <i class="fa-solid fa-phone-square menu-icon"></i>
+              <span class="menu-title">Contacts</span>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#nav-item-settings" aria-expanded="false" aria-controls="nav-item-settings">
+              <i class="fa-solid fa-cogs menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="nav-item-settings">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="import-task-categories-and-sub-categories.html">Import Data</a></li>
+              </ul>
+            </div>
+          </li>          
+        </ul>
+      </nav>
+      <!-- partial -->
+
+      <div class="main-panel">
+        <div class="content-wrapper">          
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body pb-5">
+                  <p class="card-title">
+                    <i class="fa-solid fa-arrows-turn-to-dots mr-2"></i>
+                    Assign Workflow
+                  </p>
+                  <div class="my-3">
+                    <hr>
+                  </div>
+
+                  <div class="row border rounded pb-3 pt-4 m-1 mb-5">
+                    <div class="col-md-8 col-sm-8">
+                      <div class="custom-toggle">
+                        <small class="font-weight-bold">Sort by:</small>
+                        <label class="switch switch-left-right">
+                          <input class="switch-input" type="checkbox" checked>
+                          <span class="switch-label" data-on="Asc" data-off="Desc"></span>
+                          <span class="switch-handle"></span>
+                        </label>
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-primary btn-fw btn-xs active">
+                          <i class="fa-solid fa-envelope-open-text mr-1"></i> Title
+                        </button>
+                        <button type="button" class="btn btn-outline-primary btn-fw btn-xs">
+                          <i class="far fa-calendar-plus mr-1"></i> Created at
+                        </button>
+                        <button type="button" class="btn btn-outline-primary btn-fw btn-xs">
+                          <i class="far fa-calendar-check mr-1"> </i> Updated at
+                        </button>
+                      </div>                                
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                        <div class="input-group-append">
+                          <button class="btn btn-sm btn-primary" type="button">
+                            <i class="icon-search"></i>                                    
+                            Search
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th class="col-3">Category</th>
+                        <th class="col-3">Sub Category</th>
+                        <th class="col-3">Name</th>
+                        <th class="col-3">Options</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Category 1</td>
+                        <td>Sub Category 1</td>
+                        <td>Name 1</td>
+                        <td class="py-0 px-5">
+                          <button type="button" class="btn btn-primary btn-sm text-left">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View Workflow
+                          </button>
+
+                          <a href="assign-workflow-task.html" class="btn btn-success btn-sm text-left">
+                            <i class="fa-solid fa-circle-check mr-2"></i> Assign Workflow
+                          </a>
+                        
+                          <button type="button" class="btn btn-danger btn-sm text-left">
+                            <i class="fa fa-vial mr-2"></i> Simulate
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Category 2</td>
+                        <td>Sub Category 2</td>
+                        <td>Name 2</td>
+                        <td class="py-0 px-5">
+                          <button type="button" class="btn btn-primary btn-sm text-left">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View Workflow
+                          </button>
+                        
+                          <a href="assign-workflow-task.html" class="btn btn-success btn-sm text-left">
+                            <i class="fa-solid fa-circle-check mr-2"></i> Assign Workflow
+                          </a>
+                        
+                          <button type="button" class="btn btn-danger btn-sm text-left">
+                            <i class="fa fa-vial mr-2"></i> Simulate
+                          </button>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Category 3</td>
+                        <td>Sub Category 3</td>
+                        <td>Name 3</td>
+                        <td class="py-0 px-5">
+                          <button type="button" class="btn btn-primary btn-sm text-left">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View Workflow
+                          </button>
+                        
+                          <a href="assign-workflow-task.html" class="btn btn-success btn-sm text-left">
+                            <i class="fa-solid fa-circle-check mr-2"></i> Assign Workflow
+                          </a>
+                        
+                          <button type="button" class="btn btn-danger btn-sm text-left">
+                            <i class="fa fa-vial mr-2"></i> Simulate
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <nav aria-label="Page navigation example" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022 - My Work Product. All rights reserved.</span>            
+          </div>          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  
+    <!-- Modal Fullscreen xl (Layer 2) -->
+    <div class="modal fade modal-fullscreen" id="modal-fullscreen-xl-generate-report-action" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="m-0">Job Description and/or other Document(s)</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="background: #f5f7ff;">
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-title m-0 mb-2">Assignment Information</p>
+                    <div class="card bg-light border mb-5">                    
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-12 col-sm-3">
+                            <p class="m-0">
+                              <b class="text-primary mr-2">Assign to:</b>
+                              <div class="form-group mb-2 row">                                  
+                                <div class="col-sm-12">
+                                  <input type="text" data-role="tagsinput" id="assign-to" class="form-control">
+                                  <small class="form-text text-muted">Use comma , to separate Names from each other.</small>                   
+                                </div>
+                              </div>
+                            </p>
+                          </div>  
+                          <div class="col-12 col-sm-3">
+                            <p class="m-0">
+                              <b class="text-primary mr-2">Viewers:</b>
+                              <div class="form-group mb-2 row">                                  
+                                <div class="col-sm-12">
+                                  <input type="text" data-role="tagsinput" id="viewers" class="form-control">
+                                  <small class="form-text text-muted">Use comma , to separate Names from each other.</small>                   
+                                </div>
+                              </div>
+                            </p>
+                          </div>                        
+                          <div class="col-12 col-sm-3">
+                            <p class="m-0">
+                              <b class="text-primary mr-2">Assigned by:</b>
+                              <div class="form-group mb-2 row">  
+                                <div class="col-sm-12">
+                                  <input list="assigned-bys" name="assigned-by" id="assigned-by" class="creators-hub-simulate-modal-input-text w-100 mt-4">
+                                  <datalist id="assigned-bys">
+                                    <option value="John Smith">
+                                    <option value="Ryan Reynolds">
+                                    <option value="Gal Gadoth">
+                                    <option value="Crystal Liu">
+                                    <option value="Tobey Maguire">
+                                  </datalist>                 
+                                </div>
+                              </div>
+                            </p>
+                          </div>                        
+                          <div class="col-12 col-sm-3">
+                            <p class="m-0">
+                              <b class="text-primary mr-2">Approver:</b>
+                              <div class="form-group mb-2 row">  
+                                <div class="col-sm-12">
+                                  <input list="assigned-bys" name="assigned-by" id="assigned-by" class="creators-hub-simulate-modal-input-text w-100 mt-4">
+                                  <datalist id="assigned-bys">
+                                    <option value="John Smith">
+                                    <option value="Ryan Reynolds">
+                                    <option value="Gal Gadoth">
+                                    <option value="Crystal Liu">
+                                    <option value="Tobey Maguire">
+                                  </datalist>                 
+                                </div>
+                              </div>
+                            </p>
+                          </div>                                              
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-sm-12">
+                            <div class="form-inline float-right">
+                              <b class="text-primary mr-3">Assignmnet Type:</b>
+                              <div class="form-check mr-5">
+                                <label class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="assignment-type" id="individual-task" value="" checked>
+                                  Individual Task
+                                <i class="input-helper"></i></label>
+                              </div> 
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="assignment-type" id="shared-task" value="">
+                                  Shared Task
+                                <i class="input-helper"></i></label>
+                              </div>   
+                            </div>
+                          </div>  
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="card-title m-0 mb-2">General Information</p>
+                      <div class="card bg-light border">                    
+                        <div class="card-body pb-3">
+                          <div class="row">     
+                            <div class="col-12 col-sm-3">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Due Date:</b>
+                                <input type="date" name="due-date" id="due-date" class="creators-hub-simulate-modal-input-text w-100 mt-4">
+                              </p>
+                            </div>
+                            <div class="col-12 col-sm-3">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Head's Up Days:</b>
+                                <input type="text" name="heads-up-days" id="heads-up-days" class="creators-hub-simulate-modal-input-text w-100 mt-4">
+                              </p>
+                            </div> 
+                            <div class="col-12 col-sm-3">
+                              <p class="m-0">
+                                <b class="text-primary mr-2">Urgent Days:</b>
+                                <input type="text" name="urgent-days" id="urgent-days" class="creators-hub-simulate-modal-input-text w-100 mt-4">
+                              </p>
+                            </div> 
+                            <div class="col-12 col-sm-3">
+                              <b class="text-primary mr-2">Recurrence:</b>
+                              <div class="custom-toggle">
+                                <label class="switch switch-left-right m-0">
+                                  <input class="switch-input" type="checkbox" name="recurrence" id="recurrence">
+                                  <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                  <span class="switch-handle"></span>
+                                </label>
+                              </div>                     
+                            </div>                                               
+                          </div>
+                        </div>
+                      </div>
+                    <div class="pb-5 mb-5 border-bottom"></div>
+
+                    <p class="card-title m-0 mb-2">Related Objectives</p>
+                    <table id="data-table-generate-report-action-related-objectives" class="table table-striped table-bordered" style="width:100%">
+                      <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Assign To</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                            <!-- <th>Category</th>
+                            <th>Sub Category</th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>Job Description and/or other Document(s)</td>
+                            <td>Nurse B Test</td>
+                            <td>Pending</td>
+                            <td>April 30, 2022</td>
+                            <!-- <td>CIHQ Standards and Requirements</td>
+                            <td>Competency of Staff</td> -->
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="pb-5 mb-5 border-bottom"></div>
+
+                    <p class="card-title m-0 mb-2">Action Items</p>
+                    <div class="mb-4">
+                      <small>Progress:</small>
+                      <div class="progress" style="height: 20px;">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                      </div>  
+                    </div>
+                    <table id="data-table-generate-report-action-items" class="table table-striped table-bordered mb-5" style="width:100%">
+                      <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Assign To</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td><div class="text-wrap">The minimum education, training experience, health clearances and, where applicable, licensure</div></td>
+                            <td>CIHQ Standards and Requirements</td>
+                            <td>Nurse A Test</td>
+                            <td>April 30, 2022</td>
+                            <td>Completed</td>
+                            <td class="text-center">
+                              <a href="javascript:void(0);" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-check pr-2"></i> Complete
+                              </a>
+                              <a href="javascript:void(0);" class="btn btn-dark btn-sm">
+                                <i class="fa-solid fa-xmark pr-2"></i> Mark as N/A
+                              </a>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td><div class="text-wrap">The principal duties and responsibilities of the job position</div></td>
+                          <td>CIHQ Standards and Requirements</td>
+                          <td>Nurse A Test</td>
+                          <td>April 30, 2022</td>
+                          <td>Completed</td>
+                          <td class="text-center">
+                            <a href="javascript:void(0);" class="btn btn-primary btn-sm">
+                              <i class="fa-solid fa-check pr-2"></i> Complete
+                            </a>
+                            <a href="javascript:void(0);" class="btn btn-dark btn-sm">
+                              <i class="fa-solid fa-xmark pr-2"></i> Mark as N/A
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="pb-5 mb-5 border-bottom"></div>
+
+                    <p class="card-title m-0 mb-2">Refference Materials</p>
+                    <ul class="nav nav-tabs" id="setting-panel" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="refference-materials-tab" data-toggle="tab" href="#refference-materials-section" role="tab" aria-controls="refference-materials-section" aria-expanded="true">
+                          Refference Materials <span class="badge badge-light ml-3">0</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="setting-content">
+                      <div class="tab-pane fade show active scroll-wrapper" id="refference-materials-section" role="tabpanel" aria-labelledby="refference-materials-section">
+                        <div class="wrapper wrapper-content animated fadeInRight">            
+                          <div class="accordion collapase-card" id="approvalFileUploadAccordion">
+                            <div class="card bg-light border">
+                              <div class="card-header" id="approvalFileUpload">
+                                <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#approvalFileUploadSection" aria-expanded="true" aria-controls="approvalFileUploadSection">Document Name</a>
+                              </div>
+                              <div id="approvalFileUploadSection" class="collapse" aria-labelledby="approvalFileUpload" data-parent="#approvalFileUploadAccordion">
+                                <div class="card-body pt-4">
+                                  
+                                  <section>
+                                    <div id="dropzone">
+                                      <form class="dropzone needsclick" id="demo-upload" action="/upload">
+                                        <!-- 
+                                          Uncomment this section for original File Upload Placeholder
+                                        -->
+                                        <!-- <div class="dz-message needsclick d-flex justify-content-center">
+                                          <i class="fa-solid fa-cloud-arrow-up fa-5x d-block"></i>
+                                          Drop files here or click to upload.<br />
+                                        </div> -->
+                                          
+                                        <div class="dz-message needsclick">
+                                          <div class="row row-cols-3 row-cols-md-6 justify-content-center">
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-word fa-4x d-block"></i>
+                                                <span>Filename 1</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-excel fa-4x d-block"></i>
+                                                <span>Filename 2</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-powerpoint fa-4x d-block"></i>
+                                                <span>Filename 3</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-pdf fa-4x d-block"></i>
+                                                <span>Filename 4</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-image fa-4x d-block"></i>
+                                                <span>Filename 5</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-word fa-4x d-block"></i>
+                                                <span>Filename 1</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-excel fa-4x d-block"></i>
+                                                <span>Filename 2</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-powerpoint fa-4x d-block"></i>
+                                                <span>Filename 3</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-pdf fa-4x d-block"></i>
+                                                <span>Filename 4</span>
+                                              </div>
+                                            </div>
+      
+                                            <div class="col mb-4">
+                                              <div class="border rounded shadow-sm p-4">
+                                                <i class="fa-solid fa-file-image fa-4x d-block"></i>
+                                                <span>Filename 5</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </section>
+      
+                                  <hr class="mx-5">
+                                  
+                                  <div class="col-12 border-bottom py-2 d-flex">
+                                    <span class="mr-auto"><i class="fa-solid fa-file-pdf mr-2 py-2"></i> File Demo1.pdf</span>
+                                    <button type="button" class="btn btn-primary btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-export"></i> Preview
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-trash-can"></i> Remove
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-arrow-down"></i> Download
+                                    </button>
+                                  </div>
+      
+                                  <div class="col-12 border-bottom py-2 d-flex">
+                                    <span class="mr-auto"><i class="fa-solid fa-file-word mr-2 py-2"></i> File Demo 2.doc</span>
+                                    <button type="button" class="btn btn-primary btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-export"></i> Preview
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-trash-can"></i> Remove
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-arrow-down"></i> Download
+                                    </button>
+                                  </div>
+      
+                                  <div class="col-12 border-bottom py-2 d-flex">
+                                    <span class="mr-auto"><i class="fa-solid fa-file-excel mr-2 py-2"></i> File Demo 3.xls</span>
+                                    <button type="button" class="btn btn-primary btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-export"></i> Preview
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-trash-can"></i> Remove
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-arrow-down"></i> Download
+                                    </button>
+                                  </div>
+      
+                                  <div class="col-12 border-bottom py-2 d-flex">
+                                    <span class="mr-auto"><i class="fa-solid fa-file-powerpoint mr-2 py-2"></i> File Demo 4.ppt</span>
+                                    <button type="button" class="btn btn-primary btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-export"></i> Preview
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-trash-can"></i> Remove
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-arrow-down"></i> Download
+                                    </button>
+                                  </div>
+      
+                                  <div class="col-12 border-bottom py-2 d-flex">
+                                    <span class="mr-auto"><i class="fa-solid fa-file-image mr-2 py-2"></i> File Demo 5.jpg</span>
+                                    <button type="button" class="btn btn-primary btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-export"></i> Preview
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-trash-can"></i> Remove
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-icon-text btn-sm ml-2">
+                                      <i class="fa-solid fa-file-arrow-down"></i> Download
+                                    </button>
+                                  </div>  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>                    
+                    </div>
+                    <div class="mb-5 border-bottom"></div>
+
+                    <p class="card-title m-0 mb-2">Comments and Notes</p>
+                    <div class="accordion collapase-card" id="commentsAndNotesAccordion">
+                      <div class="card bg-light border">
+                        <div class="card-header" id="commentsAndNotes">
+                          <a href="#" class="btn btn-header-link text-dark" data-toggle="collapse" data-target="#commentsAndNotesSection" aria-expanded="true" aria-controls="commentsAndNotesSection">User Comments</a>
+                        </div>
+                        <div id="commentsAndNotesSection" class="collapse" aria-labelledby="commentsAndNotes" data-parent="#commentsAndNotesAccordion">
+                          <div class="card-body pt-4">
+                            <textarea name="user-comments" class="form-control" rows="4"></textarea>
+                            <div class="w-100 mt-3">
+                              <span class="font-weight-bold mr-5">Notify by email: </span>
+                              <span class="mr-5">
+                                <input type="checkbox" id="owner" class="form-check-input">
+                                <label for="owner">Owner</label>
+                              </span>
+                              <!-- <span class="mr-5">
+                                <input type="checkbox" id="viewer" class="form-check-input">
+                                <label for="viewer">Viewer</label>
+                              </span> -->
+                              <!-- <span class="mr-5">
+                                <input type="checkbox" id="backup-owners" class="form-check-input">
+                                <label for="backup-owners">Backup Owners</label>
+                              </span> -->
+                              <!-- <span class="mr-5">
+                                <input type="checkbox" id="approver" class="form-check-input">
+                                <label for="approver">Approver</label>
+                              </span> -->
+                              <button type="button" class="btn btn-primary btn-icon-text btn-sm float-right">
+                                <i class="fa-solid fa-comment-medical"></i> Add Comment
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer py-2">
+            <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-check mr-3"></i> Assign</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fa-solid fa-rectangle-xmark pr-2"></i> Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <!-- container-scroller -->
+  
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>    
+  <script src="js/dashboard.js"></script> 
+  <script src="js/chart.js"></script>
+  <script src="js/calendar-main.js"></script>
+
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.js" integrity="sha512-9e9rr82F9BPzG81+6UrwWLFj8ZLf59jnuIA/tIf8dEGoQVu7l5qvr02G/BiAabsFOYrIUTMslVN+iDYuszftVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script>
+    function launchReportActionModal() {
+      $('#modal-fullscreen-xl-generate-report-action').modal('show');
+      console.log("dasda");
+    }
+  </script>
+</body>
+
+</html>
